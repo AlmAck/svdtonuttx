@@ -50,18 +50,6 @@ python3 svdtonuttx.py STM32F4xx.svd ./headers STM32F4
 
 This script is provided "as is", without warranty of any kind, express or implied. The author is not responsible for any damage or data loss caused by the use of this script. You are free to modify and distribute it as long as you retain this notice.
 
-## Author
-
-- AlmAck
-
-## Date
-
-- 2024-09-23
-
-## Version
-
-- 1.0
-
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
