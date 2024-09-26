@@ -1,6 +1,7 @@
 # SVD to NuttX Header Converter
 
 This repository contains a Python script [`svdtonuttx.py`] that parses an SVD (System View Description) file to extract peripheral information and generates corresponding header (.h) files formatted according to the NuttX RTOS coding standards.
+This project is inspired from [svdtoheaders](https://github.com/robertlipe/svdtoheaders).
 
 ## Features
 
