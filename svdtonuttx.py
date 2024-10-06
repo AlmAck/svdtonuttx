@@ -156,7 +156,7 @@ def export_memory_map(svd_path, output_dir, custom_prefix):
         
         file.write(f"#ifndef __{custom_prefix.upper()}_MEMORYMAP_H\n")
         file.write(f"#define __{custom_prefix.upper()}_MEMORYMAP_H\n\n")
-
+        
         for peripheral in device.peripherals:
             if peripheral.base_address:
                 name = peripheral.name
@@ -198,6 +198,23 @@ def svd_to_header(svd_path, output_dir, custom_prefix):
             
             file.write(f"#ifndef __{custom_prefix.upper()}_{peripheral.name.upper()}_H\n")
             file.write(f"#define __{custom_prefix.upper()}_{peripheral.name.upper()}_H\n\n")
+
+            """Write a standardized include and pre-processor sections"""
+            section_content = """
+/****************************************************************************
+ * Included Files
+ ****************************************************************************/
+
+#include <nuttx/config.h>
+#include "{}_memorymap.h"
+
+/****************************************************************************
+ * Pre-processor Definitions
+ ****************************************************************************/
+    """.strip()
+
+            file.write(section_content.format(custom_prefix.lower()))
+            file.write("\n\n")
 
             # Section for register offsets
             file.write("/* Register offsets *********************************************************/\n\n")
