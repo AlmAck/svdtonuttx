@@ -247,11 +247,11 @@ def svd_to_header(svd_path, output_dir, custom_prefix):
                     field_name = f"{field.name}"
                     field_comment = format_comment(field.description)
                     if field.bit_width == 1:
-                        file.write(f"#define {field_name} (1U << {field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {peripheral.name.upper()}_{field_name} (1U << {field.bit_offset}) /* {field_comment} */\n")
                     else:
                         mask = (1 << field.bit_width) - 1
-                        file.write(f"#define {field_name}_MASK (0x{mask:X} << {field.bit_offset}) /* {field_comment} */\n")
-                        file.write(f"#define {field_name}_POS ({field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {peripheral.name.upper()}_{field_name}_MASK (0x{mask:X} << {field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {peripheral.name.upper()}_{field_name}_POS ({field.bit_offset}) /* {field_comment} */\n")
 
             file.write(f"\n#endif /* __{custom_prefix.upper()}_{peripheral.name.upper()}_H */\n")
 
