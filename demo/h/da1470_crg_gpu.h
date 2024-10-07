@@ -47,9 +47,9 @@
 
 /* CLK_GPU Register */
 
-#define MIPI_D_PHY_EN                         (1U << 3) /* No description available. */
-#define MIPI_PHY_EN                           (1U << 2) /* No description available. */
-#define MIPI_DSI_EN                           (1U << 1) /* No description available. */
-#define GPU_ENABLE                            (1U << 0) /* No description available. */
+#define CRG_GPU_MIPI_D_PHY_EN                 (1U << 3) /* No description available. */
+#define CRG_GPU_MIPI_PHY_EN                   (1U << 2) /* No description available. */
+#define CRG_GPU_MIPI_DSI_EN                   (1U << 1) /* No description available. */
+#define CRG_GPU_GPU_ENABLE                    (1U << 0) /* No description available. */
 
 #endif /* __DA1470_CRG_GPU_H */

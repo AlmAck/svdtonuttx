@@ -53,27 +53,27 @@
 
 /* CLK_CAL_IRQ Register */
 
-#define CLK_CAL_IRQ_CLR                        (1U << 2) /* Clear the IRQ. 1: Clear the IRQ 0: No effect. Read out 0 always. */
-#define CLK_CAL_IRQ_STATUS                     (1U << 1) /* Shows the IRQ bit status. */
-#define CLK_CAL_IRQ_EN                         (1U << 0) /* Enable clk calibration IRQ. 0: Disabled. 1*: Enabled.  *Note: If IRQ feature is  */
+#define ANAMISC_BIF_CLK_CAL_IRQ_CLR            (1U << 2) /* Clear the IRQ. 1: Clear the IRQ 0: No effect. Read out 0 always. */
+#define ANAMISC_BIF_CLK_CAL_IRQ_STATUS         (1U << 1) /* Shows the IRQ bit status. */
+#define ANAMISC_BIF_CLK_CAL_IRQ_EN             (1U << 0) /* Enable clk calibration IRQ. 0: Disabled. 1*: Enabled.  *Note: If IRQ feature is  */
 
 /* CLK_REF_CNT Register */
 
-#define REF_CNT_VAL_MASK                       (0xFFFF << 0) /* Indicates the calibration time, with a decrement counter to 1. */
-#define REF_CNT_VAL_POS                        (0) /* Indicates the calibration time, with a decrement counter to 1. */
+#define ANAMISC_BIF_REF_CNT_VAL_MASK           (0xFFFF << 0) /* Indicates the calibration time, with a decrement counter to 1. */
+#define ANAMISC_BIF_REF_CNT_VAL_POS            (0) /* Indicates the calibration time, with a decrement counter to 1. */
 
 /* CLK_REF_SEL Register */
 
-#define CAL_CLK_SEL_MASK                       (0x7 << 5) /* Select calibration clock input to be used in calibration: 0x0 : DIVN clock 0x1 : */
-#define CAL_CLK_SEL_POS                        (5) /* Select calibration clock input to be used in calibration: 0x0 : DIVN clock 0x1 : */
-#define EXT_CNT_EN_SEL                         (1U << 4) /* 0 : Enable XTAL_CNT counter by the REF_CLK selected by REF_CLK_SEL. 1 : Enable X */
-#define REF_CAL_START                          (1U << 3) /* Writing a '1' starts a calibration. This bit is cleared when calibration is fini */
-#define REF_CLK_SEL_MASK                       (0x7 << 0) /* Select reference clock input for calibration: 0x0 : RCLP 0x1 : RCHS 0x2 : XTAL32 */
-#define REF_CLK_SEL_POS                        (0) /* Select reference clock input for calibration: 0x0 : RCLP 0x1 : RCHS 0x2 : XTAL32 */
+#define ANAMISC_BIF_CAL_CLK_SEL_MASK           (0x7 << 5) /* Select calibration clock input to be used in calibration: 0x0 : DIVN clock 0x1 : */
+#define ANAMISC_BIF_CAL_CLK_SEL_POS            (5) /* Select calibration clock input to be used in calibration: 0x0 : DIVN clock 0x1 : */
+#define ANAMISC_BIF_EXT_CNT_EN_SEL             (1U << 4) /* 0 : Enable XTAL_CNT counter by the REF_CLK selected by REF_CLK_SEL. 1 : Enable X */
+#define ANAMISC_BIF_REF_CAL_START              (1U << 3) /* Writing a '1' starts a calibration. This bit is cleared when calibration is fini */
+#define ANAMISC_BIF_REF_CLK_SEL_MASK           (0x7 << 0) /* Select reference clock input for calibration: 0x0 : RCLP 0x1 : RCHS 0x2 : XTAL32 */
+#define ANAMISC_BIF_REF_CLK_SEL_POS            (0) /* Select reference clock input for calibration: 0x0 : RCLP 0x1 : RCHS 0x2 : XTAL32 */
 
 /* CLK_REF_VAL Register */
 
-#define XTAL_CNT_VAL_MASK                      (0xFFFFFFFF << 0) /* Returns the number of DIVN clock cycles counted during the calibration time, def */
-#define XTAL_CNT_VAL_POS                       (0) /* Returns the number of DIVN clock cycles counted during the calibration time, def */
+#define ANAMISC_BIF_XTAL_CNT_VAL_MASK          (0xFFFFFFFF << 0) /* Returns the number of DIVN clock cycles counted during the calibration time, def */
+#define ANAMISC_BIF_XTAL_CNT_VAL_POS           (0) /* Returns the number of DIVN clock cycles counted during the calibration time, def */
 
 #endif /* __DA1470_ANAMISC_BIF_H */

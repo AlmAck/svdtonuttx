@@ -69,73 +69,73 @@
 
 /* CRYPTO_CLRIRQ Register */
 
-#define CRYPTO_CLRIRQ                             (1U << 0) /* Write 1 to clear a pending interrupt request. */
+#define AES_HASH_CRYPTO_CLRIRQ                    (1U << 0) /* Write 1 to clear a pending interrupt request. */
 
 /* CRYPTO_CTRL Register */
 
-#define CRYPTO_AES_KEXP                           (1U << 17) /* It forces (active high) the execution of the key expansion process with the star */
-#define CRYPTO_MORE_IN                            (1U << 16) /* 0 : Define that this is the last input block. When the current input is consumed */
-#define CRYPTO_HASH_OUT_LEN_MASK                  (0x3F << 10) /* The number of bytes minus one of the hash result which will be saved at the memo */
-#define CRYPTO_HASH_OUT_LEN_POS                   (10) /* The number of bytes minus one of the hash result which will be saved at the memo */
-#define CRYPTO_HASH_SEL                           (1U << 9) /* Selects the type of the algorithm 0 : The encryption algorithm (AES) 1 : A hash  */
-#define CRYPTO_IRQ_EN                             (1U << 8) /* Interrupt Request Enable 0 : The interrupt generation ability is disabled. 1 : T */
-#define CRYPTO_ENCDEC                             (1U << 7) /* Encryption/Decryption 0 : Decryption 1 : Encryption */
-#define CRYPTO_AES_KEY_SZ_MASK                    (0x3 << 5) /* The size of AES Key 0x0 : 128 bits AES Key 0x1 : 192 bits AES Key 0x2 : 256 bits */
-#define CRYPTO_AES_KEY_SZ_POS                     (5) /* The size of AES Key 0x0 : 128 bits AES Key 0x1 : 192 bits AES Key 0x2 : 256 bits */
-#define CRYPTO_OUT_MD                             (1U << 4) /* Output Mode. This field makes sense only when the AES algorithm is selected (CRY */
-#define CRYPTO_ALG_MD_MASK                        (0x3 << 2) /* It defines the mode of operation of the AES algorithm when the controller is con */
-#define CRYPTO_ALG_MD_POS                         (2) /* It defines the mode of operation of the AES algorithm when the controller is con */
-#define CRYPTO_ALG_MASK                           (0x3 << 0) /* Algorithm selection. When CRYPTO_HASH_SEL = 0 the only available choice is the A */
-#define CRYPTO_ALG_POS                            (0) /* Algorithm selection. When CRYPTO_HASH_SEL = 0 the only available choice is the A */
+#define AES_HASH_CRYPTO_AES_KEXP                  (1U << 17) /* It forces (active high) the execution of the key expansion process with the star */
+#define AES_HASH_CRYPTO_MORE_IN                   (1U << 16) /* 0 : Define that this is the last input block. When the current input is consumed */
+#define AES_HASH_CRYPTO_HASH_OUT_LEN_MASK         (0x3F << 10) /* The number of bytes minus one of the hash result which will be saved at the memo */
+#define AES_HASH_CRYPTO_HASH_OUT_LEN_POS          (10) /* The number of bytes minus one of the hash result which will be saved at the memo */
+#define AES_HASH_CRYPTO_HASH_SEL                  (1U << 9) /* Selects the type of the algorithm 0 : The encryption algorithm (AES) 1 : A hash  */
+#define AES_HASH_CRYPTO_IRQ_EN                    (1U << 8) /* Interrupt Request Enable 0 : The interrupt generation ability is disabled. 1 : T */
+#define AES_HASH_CRYPTO_ENCDEC                    (1U << 7) /* Encryption/Decryption 0 : Decryption 1 : Encryption */
+#define AES_HASH_CRYPTO_AES_KEY_SZ_MASK           (0x3 << 5) /* The size of AES Key 0x0 : 128 bits AES Key 0x1 : 192 bits AES Key 0x2 : 256 bits */
+#define AES_HASH_CRYPTO_AES_KEY_SZ_POS            (5) /* The size of AES Key 0x0 : 128 bits AES Key 0x1 : 192 bits AES Key 0x2 : 256 bits */
+#define AES_HASH_CRYPTO_OUT_MD                    (1U << 4) /* Output Mode. This field makes sense only when the AES algorithm is selected (CRY */
+#define AES_HASH_CRYPTO_ALG_MD_MASK               (0x3 << 2) /* It defines the mode of operation of the AES algorithm when the controller is con */
+#define AES_HASH_CRYPTO_ALG_MD_POS                (2) /* It defines the mode of operation of the AES algorithm when the controller is con */
+#define AES_HASH_CRYPTO_ALG_MASK                  (0x3 << 0) /* Algorithm selection. When CRYPTO_HASH_SEL = 0 the only available choice is the A */
+#define AES_HASH_CRYPTO_ALG_POS                   (0) /* Algorithm selection. When CRYPTO_HASH_SEL = 0 the only available choice is the A */
 
 /* CRYPTO_DEST_ADDR Register */
 
-#define CRYPTO_DEST_ADDR_MASK                     (0xFFFFFFFF << 0) /* Destination address at where the result of the processing is stored. The value o */
-#define CRYPTO_DEST_ADDR_POS                      (0) /* Destination address at where the result of the processing is stored. The value o */
+#define AES_HASH_CRYPTO_DEST_ADDR_MASK            (0xFFFFFFFF << 0) /* Destination address at where the result of the processing is stored. The value o */
+#define AES_HASH_CRYPTO_DEST_ADDR_POS             (0) /* Destination address at where the result of the processing is stored. The value o */
 
 /* CRYPTO_FETCH_ADDR Register */
 
-#define CRYPTO_FETCH_ADDR_MASK                    (0xFFFFFFFF << 0) /* The memory address from where will be retrieved the data that will be processed. */
-#define CRYPTO_FETCH_ADDR_POS                     (0) /* The memory address from where will be retrieved the data that will be processed. */
+#define AES_HASH_CRYPTO_FETCH_ADDR_MASK           (0xFFFFFFFF << 0) /* The memory address from where will be retrieved the data that will be processed. */
+#define AES_HASH_CRYPTO_FETCH_ADDR_POS            (0) /* The memory address from where will be retrieved the data that will be processed. */
 
 /* CRYPTO_KEYS_START Register */
 
-#define CRYPTO_KEY_X_MASK                         (0xFFFFFFFF << 0) /* CRYPTO_KEY_(0-63) This is the AES keys storage memory. This memory is accessible */
-#define CRYPTO_KEY_X_POS                          (0) /* CRYPTO_KEY_(0-63) This is the AES keys storage memory. This memory is accessible */
+#define AES_HASH_CRYPTO_KEY_X_MASK                (0xFFFFFFFF << 0) /* CRYPTO_KEY_(0-63) This is the AES keys storage memory. This memory is accessible */
+#define AES_HASH_CRYPTO_KEY_X_POS                 (0) /* CRYPTO_KEY_(0-63) This is the AES keys storage memory. This memory is accessible */
 
 /* CRYPTO_LEN Register */
 
-#define CRYPTO_LEN_MASK                           (0xFFFFFF << 0) /* It contains the number of bytes of input data. If this number is not a multiple  */
-#define CRYPTO_LEN_POS                            (0) /* It contains the number of bytes of input data. If this number is not a multiple  */
+#define AES_HASH_CRYPTO_LEN_MASK                  (0xFFFFFF << 0) /* It contains the number of bytes of input data. If this number is not a multiple  */
+#define AES_HASH_CRYPTO_LEN_POS                   (0) /* It contains the number of bytes of input data. If this number is not a multiple  */
 
 /* CRYPTO_MREG0 Register */
 
-#define CRYPTO_MREG0_MASK                         (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
-#define CRYPTO_MREG0_POS                          (0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG0_MASK                (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG0_POS                 (0) /* It contains information that are depended by the mode of operation, when is used */
 
 /* CRYPTO_MREG1 Register */
 
-#define CRYPTO_MREG1_MASK                         (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
-#define CRYPTO_MREG1_POS                          (0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG1_MASK                (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG1_POS                 (0) /* It contains information that are depended by the mode of operation, when is used */
 
 /* CRYPTO_MREG2 Register */
 
-#define CRYPTO_MREG2_MASK                         (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
-#define CRYPTO_MREG2_POS                          (0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG2_MASK                (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG2_POS                 (0) /* It contains information that are depended by the mode of operation, when is used */
 
 /* CRYPTO_MREG3 Register */
 
-#define CRYPTO_MREG3_MASK                         (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
-#define CRYPTO_MREG3_POS                          (0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG3_MASK                (0xFFFFFFFF << 0) /* It contains information that are depended by the mode of operation, when is used */
+#define AES_HASH_CRYPTO_MREG3_POS                 (0) /* It contains information that are depended by the mode of operation, when is used */
 
 /* CRYPTO_START Register */
 
-#define CRYPTO_START                              (1U << 0) /* Write 1 to initiate the processing of the input data. This register is auto-clea */
+#define AES_HASH_CRYPTO_START                     (1U << 0) /* Write 1 to initiate the processing of the input data. This register is auto-clea */
 
 /* CRYPTO_STATUS Register */
 
-#define CRYPTO_IRQ_ST                             (1U << 2) /* The status of the interrupt request line of the CRYPTO block. 0 : There is no ac */
-#define CRYPTO_WAIT_FOR_IN                        (1U << 1) /* Indicates the situation where the engine waits for more input data. This is appl */
-#define CRYPTO_INACTIVE                           (1U << 0) /* 0 : The CRYPTO is active. The processing is in progress. 1 : The CRYPTO is inact */
+#define AES_HASH_CRYPTO_IRQ_ST                    (1U << 2) /* The status of the interrupt request line of the CRYPTO block. 0 : There is no ac */
+#define AES_HASH_CRYPTO_WAIT_FOR_IN               (1U << 1) /* Indicates the situation where the engine waits for more input data. This is appl */
+#define AES_HASH_CRYPTO_INACTIVE                  (1U << 0) /* 0 : The CRYPTO is active. The processing is in progress. 1 : The CRYPTO is inact */
 
 #endif /* __DA1470_AES_HASH_H */

@@ -47,16 +47,16 @@
 
 /* BUCK_CTRL Register */
 
-#define CFG_TIMEOUT_MASK                      (0x3 << 14) /* Sets maximum switch on-time. 0x0: Disabled 0x1: 0.5 ms 0x2: 1.0 ms (Default) 0x3 */
-#define CFG_TIMEOUT_POS                       (14) /* Sets maximum switch on-time. 0x0: Disabled 0x1: 0.5 ms 0x2: 1.0 ms (Default) 0x3 */
-#define EN_FREEWHEEL                          (1U << 13) /* Enables freewheel switch when converter is idle. */
-#define TRIM_BIAS_MASK                        (0x7 << 10) /* Bias current trim. 0x0: -21 % 0x1: -14 % 0x2: -7 % 0x3: +0 % (Default) 0x4: +7 % */
-#define TRIM_BIAS_POS                         (10) /* Bias current trim. 0x0: -21 % 0x1: -14 % 0x2: -7 % 0x3: +0 % (Default) 0x4: +7 % */
-#define CFG_IMAX_UPPER_MASK                   (0x7 << 5) /* Sets upper value of inductor peak current limit control. 0x0: 260 mA 0x1: 400 mA */
-#define CFG_IMAX_UPPER_POS                    (5) /* Sets upper value of inductor peak current limit control. 0x0: 260 mA 0x1: 400 mA */
-#define CFG_IMAX_LOWER_MASK                   (0x7 << 2) /* Sets lower value of inductor peak current limit control. 0x0: 260 mA (Default) 0 */
-#define CFG_IMAX_LOWER_POS                    (2) /* Sets lower value of inductor peak current limit control. 0x0: 260 mA (Default) 0 */
-#define CFG_HYST_MASK                         (0x3 << 0) /* Controls hysteresis on output comparator. Values listed are typical. 0x0: 6 mV ( */
-#define CFG_HYST_POS                          (0) /* Controls hysteresis on output comparator. Values listed are typical. 0x0: 6 mV ( */
+#define DCDC_CFG_TIMEOUT_MASK                 (0x3 << 14) /* Sets maximum switch on-time. 0x0: Disabled 0x1: 0.5 ms 0x2: 1.0 ms (Default) 0x3 */
+#define DCDC_CFG_TIMEOUT_POS                  (14) /* Sets maximum switch on-time. 0x0: Disabled 0x1: 0.5 ms 0x2: 1.0 ms (Default) 0x3 */
+#define DCDC_EN_FREEWHEEL                     (1U << 13) /* Enables freewheel switch when converter is idle. */
+#define DCDC_TRIM_BIAS_MASK                   (0x7 << 10) /* Bias current trim. 0x0: -21 % 0x1: -14 % 0x2: -7 % 0x3: +0 % (Default) 0x4: +7 % */
+#define DCDC_TRIM_BIAS_POS                    (10) /* Bias current trim. 0x0: -21 % 0x1: -14 % 0x2: -7 % 0x3: +0 % (Default) 0x4: +7 % */
+#define DCDC_CFG_IMAX_UPPER_MASK              (0x7 << 5) /* Sets upper value of inductor peak current limit control. 0x0: 260 mA 0x1: 400 mA */
+#define DCDC_CFG_IMAX_UPPER_POS               (5) /* Sets upper value of inductor peak current limit control. 0x0: 260 mA 0x1: 400 mA */
+#define DCDC_CFG_IMAX_LOWER_MASK              (0x7 << 2) /* Sets lower value of inductor peak current limit control. 0x0: 260 mA (Default) 0 */
+#define DCDC_CFG_IMAX_LOWER_POS               (2) /* Sets lower value of inductor peak current limit control. 0x0: 260 mA (Default) 0 */
+#define DCDC_CFG_HYST_MASK                    (0x3 << 0) /* Controls hysteresis on output comparator. Values listed are typical. 0x0: 6 mV ( */
+#define DCDC_CFG_HYST_POS                     (0) /* Controls hysteresis on output comparator. Values listed are typical. 0x0: 6 mV ( */
 
 #endif /* __DA1470_DCDC_H */

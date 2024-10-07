@@ -53,34 +53,34 @@
 
 /* VSYS_GEN_CTRL Register */
 
-#define FORCE_VBAT_VSYS_SW_MASK                     (0x3 << 23) /* 0x0,0x1: VBAT_VSYS set to ideal diode 0x2: Forces VBAT_VSYS switch to be opened  */
-#define FORCE_VBAT_VSYS_SW_POS                      (23) /* 0x0,0x1: VBAT_VSYS set to ideal diode 0x2: Forces VBAT_VSYS switch to be opened  */
-#define FORCE_LDO_ENABLE_MASK                       (0x3 << 21) /* 0x0,0x1: LDO VSYS will be enabled when COMP_VBUS_OK & COMP_VBUS_ABOVE_VSYS. 0x2: */
-#define FORCE_LDO_ENABLE_POS                        (21) /* 0x0,0x1: LDO VSYS will be enabled when COMP_VBUS_OK & COMP_VBUS_ABOVE_VSYS. 0x2: */
-#define LDO_TEMP_PROTECT_MODE_MASK                  (0x3 << 19) /* 0x0: LDO_VSYS is muted (disabled) when temperature is too high, when temperature */
-#define LDO_TEMP_PROTECT_MODE_POS                   (19) /* 0x0: LDO_VSYS is muted (disabled) when temperature is too high, when temperature */
-#define EN_HEADROOM                                 (1U << 18) /* Enables the voltage headroom loop in the LDO_VSYS. */
-#define CURLIM_OFFSET_TRIM_MASK                     (0x1F << 13) /* For adjusting the offset of the curlim range ( +/- 78 mA) 0x0 = maximum positive */
-#define CURLIM_OFFSET_TRIM_POS                      (13) /* For adjusting the offset of the curlim range ( +/- 78 mA) 0x0 = maximum positive */
-#define CURLIM_GAIN_TRIM_MASK                       (0x1F << 8) /* For adjusting the gain of the curlim range ( +/- 20%) 0x0 = maximum gain. 0x10 = */
-#define CURLIM_GAIN_TRIM_POS                        (8) /* For adjusting the gain of the curlim range ( +/- 20%) 0x0 = maximum gain. 0x10 = */
-#define CURLIM_SET_MASK                             (0x7F << 1) /* Sets the level of the LDO_VSYS current limiter in 10 mA steps. It is reset when  */
-#define CURLIM_SET_POS                              (1) /* Sets the level of the LDO_VSYS current limiter in 10 mA steps. It is reset when  */
-#define EN_CURLIM                                   (1U << 0) /* Enables the current limiter in the LDO_VSYS */
+#define CRG_VSYS_FORCE_VBAT_VSYS_SW_MASK            (0x3 << 23) /* 0x0,0x1: VBAT_VSYS set to ideal diode 0x2: Forces VBAT_VSYS switch to be opened  */
+#define CRG_VSYS_FORCE_VBAT_VSYS_SW_POS             (23) /* 0x0,0x1: VBAT_VSYS set to ideal diode 0x2: Forces VBAT_VSYS switch to be opened  */
+#define CRG_VSYS_FORCE_LDO_ENABLE_MASK              (0x3 << 21) /* 0x0,0x1: LDO VSYS will be enabled when COMP_VBUS_OK & COMP_VBUS_ABOVE_VSYS. 0x2: */
+#define CRG_VSYS_FORCE_LDO_ENABLE_POS               (21) /* 0x0,0x1: LDO VSYS will be enabled when COMP_VBUS_OK & COMP_VBUS_ABOVE_VSYS. 0x2: */
+#define CRG_VSYS_LDO_TEMP_PROTECT_MODE_MASK         (0x3 << 19) /* 0x0: LDO_VSYS is muted (disabled) when temperature is too high, when temperature */
+#define CRG_VSYS_LDO_TEMP_PROTECT_MODE_POS          (19) /* 0x0: LDO_VSYS is muted (disabled) when temperature is too high, when temperature */
+#define CRG_VSYS_EN_HEADROOM                        (1U << 18) /* Enables the voltage headroom loop in the LDO_VSYS. */
+#define CRG_VSYS_CURLIM_OFFSET_TRIM_MASK            (0x1F << 13) /* For adjusting the offset of the curlim range ( +/- 78 mA) 0x0 = maximum positive */
+#define CRG_VSYS_CURLIM_OFFSET_TRIM_POS             (13) /* For adjusting the offset of the curlim range ( +/- 78 mA) 0x0 = maximum positive */
+#define CRG_VSYS_CURLIM_GAIN_TRIM_MASK              (0x1F << 8) /* For adjusting the gain of the curlim range ( +/- 20%) 0x0 = maximum gain. 0x10 = */
+#define CRG_VSYS_CURLIM_GAIN_TRIM_POS               (8) /* For adjusting the gain of the curlim range ( +/- 20%) 0x0 = maximum gain. 0x10 = */
+#define CRG_VSYS_CURLIM_SET_MASK                    (0x7F << 1) /* Sets the level of the LDO_VSYS current limiter in 10 mA steps. It is reset when  */
+#define CRG_VSYS_CURLIM_SET_POS                     (1) /* Sets the level of the LDO_VSYS current limiter in 10 mA steps. It is reset when  */
+#define CRG_VSYS_EN_CURLIM                          (1U << 0) /* Enables the current limiter in the LDO_VSYS */
 
 /* VSYS_GEN_IRQ_CLEAR Register */
 
-#define VBUS_LOW_DRIVE_IRQ_CLEAR                    (1U << 1) /* Clears VBUS_LOW_DRIVE_IRQ */
-#define LDO_VSYS_HIGH_TEMP_IRQ_CLEAR                (1U << 0) /* Clears LDO_VSYS_HIGH_TEMP_IRQ */
+#define CRG_VSYS_VBUS_LOW_DRIVE_IRQ_CLEAR           (1U << 1) /* Clears VBUS_LOW_DRIVE_IRQ */
+#define CRG_VSYS_LDO_VSYS_HIGH_TEMP_IRQ_CLEAR       (1U << 0) /* Clears LDO_VSYS_HIGH_TEMP_IRQ */
 
 /* VSYS_GEN_IRQ_MASK Register */
 
-#define VBUS_LOW_DRIVE_IRQ_MASK                     (1U << 1) /* Masks VBUS_LOW_DRIVE_IRQ interrupt. It is reset when vbus is not plugged in (COM */
-#define LDO_VSYS_HIGH_TEMP_IRQ_MASK                 (1U << 0) /* Masks LDO_VSYS_HIGH_TEMP_IRQ interrupt */
+#define CRG_VSYS_VBUS_LOW_DRIVE_IRQ_MASK            (1U << 1) /* Masks VBUS_LOW_DRIVE_IRQ interrupt. It is reset when vbus is not plugged in (COM */
+#define CRG_VSYS_LDO_VSYS_HIGH_TEMP_IRQ_MASK        (1U << 0) /* Masks LDO_VSYS_HIGH_TEMP_IRQ interrupt */
 
 /* VSYS_GEN_IRQ_STATUS Register */
 
-#define VBUS_LOW_DRIVE_IRQ_STATUS                   (1U << 1) /* Indicates vbus drive strength is not enough to keep vbus up with the set limit o */
-#define LDO_VSYS_HIGH_TEMP_IRQ_STATUS               (1U << 0) /* Indicates that a high temperature has been detected at ldo_vsys */
+#define CRG_VSYS_VBUS_LOW_DRIVE_IRQ_STATUS          (1U << 1) /* Indicates vbus drive strength is not enough to keep vbus up with the set limit o */
+#define CRG_VSYS_LDO_VSYS_HIGH_TEMP_IRQ_STATUS      (1U << 0) /* Indicates that a high temperature has been detected at ldo_vsys */
 
 #endif /* __DA1470_CRG_VSYS_H */

@@ -153,428 +153,428 @@
 
 /* DMA0_A_START Register */
 
-#define DMA0_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 0 */
-#define DMA0_A_START_POS                      (0) /* Source start address of channel 0 */
+#define DMA_DMA0_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 0 */
+#define DMA_DMA0_A_START_POS                  (0) /* Source start address of channel 0 */
 
 /* DMA0_B_START Register */
 
-#define DMA0_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 0 */
-#define DMA0_B_START_POS                      (0) /* Destination start address of channel 0 */
+#define DMA_DMA0_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 0 */
+#define DMA_DMA0_B_START_POS                  (0) /* Destination start address of channel 0 */
 
 /* DMA0_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA0_IDX Register */
 
-#define DMA0_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA0_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA0_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA0_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA0_INT Register */
 
-#define DMA0_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA0_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA0_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA0_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA0_LEN Register */
 
-#define DMA0_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA0_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA0_LEN_POS                          (0) /* DMA channel's transfer length. DMA0_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA0_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA0_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA0_LEN_POS                      (0) /* DMA channel's transfer length. DMA0_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA1_A_START Register */
 
-#define DMA1_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 1 */
-#define DMA1_A_START_POS                      (0) /* Source start address of channel 1 */
+#define DMA_DMA1_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 1 */
+#define DMA_DMA1_A_START_POS                  (0) /* Source start address of channel 1 */
 
 /* DMA1_B_START Register */
 
-#define DMA1_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 1 */
-#define DMA1_B_START_POS                      (0) /* Destination start address of channel 1 */
+#define DMA_DMA1_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 1 */
+#define DMA_DMA1_B_START_POS                  (0) /* Destination start address of channel 1 */
 
 /* DMA1_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA1_IDX Register */
 
-#define DMA1_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA1_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA1_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA1_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA1_INT Register */
 
-#define DMA1_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA1_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA1_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA1_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA1_LEN Register */
 
-#define DMA1_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA1_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA1_LEN_POS                          (0) /* DMA channel's transfer length. DMA1_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA1_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA1_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA1_LEN_POS                      (0) /* DMA channel's transfer length. DMA1_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA2_A_START Register */
 
-#define DMA2_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 2 */
-#define DMA2_A_START_POS                      (0) /* Source start address of channel 2 */
+#define DMA_DMA2_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 2 */
+#define DMA_DMA2_A_START_POS                  (0) /* Source start address of channel 2 */
 
 /* DMA2_B_START Register */
 
-#define DMA2_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 2 */
-#define DMA2_B_START_POS                      (0) /* Destination start address of channel 2 */
+#define DMA_DMA2_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 2 */
+#define DMA_DMA2_B_START_POS                  (0) /* Destination start address of channel 2 */
 
 /* DMA2_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define BINC                                  (1U << 4) /* Enable increment of destination address 0 = do not increment 1 = increment accor */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address 0 = do not increment 1 = increment accor */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA2_IDX Register */
 
-#define DMA2_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA2_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA2_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA2_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA2_INT Register */
 
-#define DMA2_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA2_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA2_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA2_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA2_LEN Register */
 
-#define DMA2_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA2_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA2_LEN_POS                          (0) /* DMA channel's transfer length. DMA2_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA2_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA2_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA2_LEN_POS                      (0) /* DMA channel's transfer length. DMA2_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA3_A_START Register */
 
-#define DMA3_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 3 */
-#define DMA3_A_START_POS                      (0) /* Source start address of channel 3 */
+#define DMA_DMA3_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 3 */
+#define DMA_DMA3_A_START_POS                  (0) /* Source start address of channel 3 */
 
 /* DMA3_B_START Register */
 
-#define DMA3_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 3 */
-#define DMA3_B_START_POS                      (0) /* Destination start address of channel 3 */
+#define DMA_DMA3_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 3 */
+#define DMA_DMA3_B_START_POS                  (0) /* Destination start address of channel 3 */
 
 /* DMA3_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA3_IDX Register */
 
-#define DMA3_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA3_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA3_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA3_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA3_INT Register */
 
-#define DMA3_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA3_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA3_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA3_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA3_LEN Register */
 
-#define DMA3_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA3_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA3_LEN_POS                          (0) /* DMA channel's transfer length. DMA3_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA3_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA3_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA3_LEN_POS                      (0) /* DMA channel's transfer length. DMA3_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA4_A_START Register */
 
-#define DMA4_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 4 */
-#define DMA4_A_START_POS                      (0) /* Source start address of channel 4 */
+#define DMA_DMA4_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 4 */
+#define DMA_DMA4_A_START_POS                  (0) /* Source start address of channel 4 */
 
 /* DMA4_B_START Register */
 
-#define DMA4_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 4 */
-#define DMA4_B_START_POS                      (0) /* Destination start address of channel 4 */
+#define DMA_DMA4_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 4 */
+#define DMA_DMA4_B_START_POS                  (0) /* Destination start address of channel 4 */
 
 /* DMA4_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA4_IDX Register */
 
-#define DMA4_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA4_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA4_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA4_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA4_INT Register */
 
-#define DMA4_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA4_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA4_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA4_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA4_LEN Register */
 
-#define DMA4_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA4_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA4_LEN_POS                          (0) /* DMA channel's transfer length. DMA4_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA4_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA4_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA4_LEN_POS                      (0) /* DMA channel's transfer length. DMA4_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA5_A_START Register */
 
-#define DMA5_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 5 */
-#define DMA5_A_START_POS                      (0) /* Source start address of channel 5 */
+#define DMA_DMA5_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 5 */
+#define DMA_DMA5_A_START_POS                  (0) /* Source start address of channel 5 */
 
 /* DMA5_B_START Register */
 
-#define DMA5_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 5 */
-#define DMA5_B_START_POS                      (0) /* Destination start address of channel 5 */
+#define DMA_DMA5_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 5 */
+#define DMA_DMA5_B_START_POS                  (0) /* Destination start address of channel 5 */
 
 /* DMA5_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA5_IDX Register */
 
-#define DMA5_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA5_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA5_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA5_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA5_INT Register */
 
-#define DMA5_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA5_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA5_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA5_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA5_LEN Register */
 
-#define DMA5_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA5_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA5_LEN_POS                          (0) /* DMA channel's transfer length. DMA5_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA5_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA5_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA5_LEN_POS                      (0) /* DMA channel's transfer length. DMA5_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA6_A_START Register */
 
-#define DMA6_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 6 */
-#define DMA6_A_START_POS                      (0) /* Source start address of channel 6 */
+#define DMA_DMA6_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 6 */
+#define DMA_DMA6_A_START_POS                  (0) /* Source start address of channel 6 */
 
 /* DMA6_B_START Register */
 
-#define DMA6_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 6 */
-#define DMA6_B_START_POS                      (0) /* Destination start address of channel 6 */
+#define DMA_DMA6_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 6 */
+#define DMA_DMA6_B_START_POS                  (0) /* Destination start address of channel 6 */
 
 /* DMA6_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA6_IDX Register */
 
-#define DMA6_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA6_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA6_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA6_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA6_INT Register */
 
-#define DMA6_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA6_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA6_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA6_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA6_LEN Register */
 
-#define DMA6_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA6_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA6_LEN_POS                          (0) /* DMA channel's transfer length. DMA6_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA6_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA6_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA6_LEN_POS                      (0) /* DMA channel's transfer length. DMA6_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA7_A_START Register */
 
-#define DMA7_A_START_MASK                     (0xFFFFFFFF << 0) /* Source start address of channel 7 */
-#define DMA7_A_START_POS                      (0) /* Source start address of channel 7 */
+#define DMA_DMA7_A_START_MASK                 (0xFFFFFFFF << 0) /* Source start address of channel 7 */
+#define DMA_DMA7_A_START_POS                  (0) /* Source start address of channel 7 */
 
 /* DMA7_B_START Register */
 
-#define DMA7_B_START_MASK                     (0xFFFFFFFF << 0) /* Destination start address of channel 7 */
-#define DMA7_B_START_POS                      (0) /* Destination start address of channel 7 */
+#define DMA_DMA7_B_START_MASK                 (0xFFFFFFFF << 0) /* Destination start address of channel 7 */
+#define DMA_DMA7_B_START_POS                  (0) /* Destination start address of channel 7 */
 
 /* DMA7_CTRL Register */
 
-#define DMA_EXCLUSIVE_ACCESS                  (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
-#define BUS_ERROR_DETECT                      (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
-#define BURST_MODE_MASK                       (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define BURST_MODE_POS                        (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
-#define REQ_SENSE                             (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
-#define DMA_INIT                              (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
-#define DMA_IDLE                              (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
-#define DMA_PRIO_MASK                         (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
-#define DMA_PRIO_POS                          (7) /* The priority level determines which DMA channel will be granted access for trans */
-#define CIRCULAR                              (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
-#define AINC                                  (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
-#define BINC                                  (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
-#define DREQ_MODE                             (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
-#define BW_MASK                               (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define BW_POS                                (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
-#define DMA_ON                                (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
+#define DMA_DMA_EXCLUSIVE_ACCESS              (1U << 16) /* 0: DMA channel de-asserts the bus request upon completion of the write transfer  */
+#define DMA_BUS_ERROR_DETECT                  (1U << 15) /* 0: Ignores bus error response from the AHB bus, so DMA continues normally. 1: De */
+#define DMA_BURST_MODE_MASK                   (0x3 << 13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_BURST_MODE_POS                    (13) /* Enables the DMA read/write bursts, according to the following configuration: 00  */
+#define DMA_REQ_SENSE                         (1U << 12) /* 0: DMA operates with level-sensitive peripheral requests (default) 1: DMA operat */
+#define DMA_DMA_INIT                          (1U << 11) /* 0: DMA performs copy A1 to B1, A2 to B2, etc ... 1: DMA performs copy of A1 to B */
+#define DMA_DMA_IDLE                          (1U << 10) /* 0: Blocking mode, the DMA performs a fast back-to-back copy, disabling bus acces */
+#define DMA_DMA_PRIO_MASK                     (0x7 << 7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_DMA_PRIO_POS                      (7) /* The priority level determines which DMA channel will be granted access for trans */
+#define DMA_CIRCULAR                          (1U << 6) /* 0: Normal mode. The DMA channel stops after having completed the transfer of len */
+#define DMA_AINC                              (1U << 5) /* Enable increment of source address. 0 = do not increment (source address stays t */
+#define DMA_BINC                              (1U << 4) /* Enable increment of destination address. 0 = do not increment (destination addre */
+#define DMA_DREQ_MODE                         (1U << 3) /* 0: DMA channel starts immediately 1: DMA channel must be triggered by peripheral */
+#define DMA_BW_MASK                           (0x3 << 1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_BW_POS                            (1) /* Bus transfer width: 00 = 1 Byte (suggested for peripherals like UART and 8-bit S */
+#define DMA_DMA_ON                            (1U << 0) /* 0: DMA channel is off, clocks are disabled 1: DMA channel is enabled. This bit w */
 
 /* DMA7_IDX Register */
 
-#define DMA7_IDX_MASK                         (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
-#define DMA7_IDX_POS                          (0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA7_IDX_MASK                     (0xFFFF << 0) /* This (read-only) register determines the data items already transferred by the D */
+#define DMA_DMA7_IDX_POS                      (0) /* This (read-only) register determines the data items already transferred by the D */
 
 /* DMA7_INT Register */
 
-#define DMA7_INT_MASK                         (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
-#define DMA7_INT_POS                          (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA7_INT_MASK                     (0xFFFF << 0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
+#define DMA_DMA7_INT_POS                      (0) /* Number of transfers until an interrupt is generated. The interrupt is generated  */
 
 /* DMA7_LEN Register */
 
-#define DMA7_LEN_MASK                         (0xFFFF << 0) /* DMA channel's transfer length. DMA7_LEN of value 0, 1, 2, ... results into an ac */
-#define DMA7_LEN_POS                          (0) /* DMA channel's transfer length. DMA7_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA7_LEN_MASK                     (0xFFFF << 0) /* DMA channel's transfer length. DMA7_LEN of value 0, 1, 2, ... results into an ac */
+#define DMA_DMA7_LEN_POS                      (0) /* DMA channel's transfer length. DMA7_LEN of value 0, 1, 2, ... results into an ac */
 
 /* DMA_CLEAR_INT Register */
 
-#define DMA_RST_IRQ_CH7                       (1U << 7) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 7 ; writ */
-#define DMA_RST_IRQ_CH6                       (1U << 6) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 6 ; writ */
-#define DMA_RST_IRQ_CH5                       (1U << 5) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 5 ; writ */
-#define DMA_RST_IRQ_CH4                       (1U << 4) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 4 ; writ */
-#define DMA_RST_IRQ_CH3                       (1U << 3) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 3 ; writ */
-#define DMA_RST_IRQ_CH2                       (1U << 2) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 2 ; writ */
-#define DMA_RST_IRQ_CH1                       (1U << 1) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 1 ; writ */
-#define DMA_RST_IRQ_CH0                       (1U << 0) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 0 ; writ */
+#define DMA_DMA_RST_IRQ_CH7                   (1U << 7) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 7 ; writ */
+#define DMA_DMA_RST_IRQ_CH6                   (1U << 6) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 6 ; writ */
+#define DMA_DMA_RST_IRQ_CH5                   (1U << 5) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 5 ; writ */
+#define DMA_DMA_RST_IRQ_CH4                   (1U << 4) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 4 ; writ */
+#define DMA_DMA_RST_IRQ_CH3                   (1U << 3) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 3 ; writ */
+#define DMA_DMA_RST_IRQ_CH2                   (1U << 2) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 2 ; writ */
+#define DMA_DMA_RST_IRQ_CH1                   (1U << 1) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 1 ; writ */
+#define DMA_DMA_RST_IRQ_CH0                   (1U << 0) /* Writing a 1 will reset the status bit of DMA_INT_STATUS_REG for channel 0 ; writ */
 
 /* DMA_INT_MASK Register */
 
-#define DMA_IRQ_ENABLE7                       (1U << 7) /* 0: disable interrupts on channel 7 1: enable interrupts on channel 7 */
-#define DMA_IRQ_ENABLE6                       (1U << 6) /* 0: disable interrupts on channel 6 1: enable interrupts on channel 6 */
-#define DMA_IRQ_ENABLE5                       (1U << 5) /* 0: disable interrupts on channel 5 1: enable interrupts on channel 5 */
-#define DMA_IRQ_ENABLE4                       (1U << 4) /* 0: disable interrupts on channel 4 1: enable interrupts on channel 4 */
-#define DMA_IRQ_ENABLE3                       (1U << 3) /* 0: disable interrupts on channel 3 1: enable interrupts on channel 3 */
-#define DMA_IRQ_ENABLE2                       (1U << 2) /* 0: disable interrupts on channel 2 1: enable interrupts on channel 2 */
-#define DMA_IRQ_ENABLE1                       (1U << 1) /* 0: disable interrupts on channel 1 1: enable interrupts on channel 1 */
-#define DMA_IRQ_ENABLE0                       (1U << 0) /* 0: disable interrupts on channel 0 1: enable interrupts on channel 0 */
+#define DMA_DMA_IRQ_ENABLE7                   (1U << 7) /* 0: disable interrupts on channel 7 1: enable interrupts on channel 7 */
+#define DMA_DMA_IRQ_ENABLE6                   (1U << 6) /* 0: disable interrupts on channel 6 1: enable interrupts on channel 6 */
+#define DMA_DMA_IRQ_ENABLE5                   (1U << 5) /* 0: disable interrupts on channel 5 1: enable interrupts on channel 5 */
+#define DMA_DMA_IRQ_ENABLE4                   (1U << 4) /* 0: disable interrupts on channel 4 1: enable interrupts on channel 4 */
+#define DMA_DMA_IRQ_ENABLE3                   (1U << 3) /* 0: disable interrupts on channel 3 1: enable interrupts on channel 3 */
+#define DMA_DMA_IRQ_ENABLE2                   (1U << 2) /* 0: disable interrupts on channel 2 1: enable interrupts on channel 2 */
+#define DMA_DMA_IRQ_ENABLE1                   (1U << 1) /* 0: disable interrupts on channel 1 1: enable interrupts on channel 1 */
+#define DMA_DMA_IRQ_ENABLE0                   (1U << 0) /* 0: disable interrupts on channel 0 1: enable interrupts on channel 0 */
 
 /* DMA_INT_STATUS Register */
 
-#define DMA_BUS_ERR7                          (1U << 15) /* 0: No bus error response is detected for channel 7 1: Bus error response detecte */
-#define DMA_BUS_ERR6                          (1U << 14) /* 0: No bus error response is detected for channel 6 1: Bus error response detecte */
-#define DMA_BUS_ERR5                          (1U << 13) /* 0: No bus error response is detected for channel 5 1: Bus error response detecte */
-#define DMA_BUS_ERR4                          (1U << 12) /* 0: No bus error response is detected for channel 4 1: Bus error response detecte */
-#define DMA_BUS_ERR3                          (1U << 11) /* 0: No bus error response is detected for channel 3 1: Bus error response detecte */
-#define DMA_BUS_ERR2                          (1U << 10) /* 0: No bus error response is detected for channel 2 1: Bus error response detecte */
-#define DMA_BUS_ERR1                          (1U << 9) /* 0: No bus error response is detected for channel 1 1: Bus error response detecte */
-#define DMA_BUS_ERR0                          (1U << 8) /* 0: No bus error response is detected for channel 0 1: Bus error response detecte */
-#define DMA_IRQ_CH7                           (1U << 7) /* 0: IRQ on channel 7 is not set 1: IRQ on channel 7 is set */
-#define DMA_IRQ_CH6                           (1U << 6) /* 0: IRQ on channel 6 is not set 1: IRQ on channel 6 is set */
-#define DMA_IRQ_CH5                           (1U << 5) /* 0: IRQ on channel 5 is not set 1: IRQ on channel 5 is set */
-#define DMA_IRQ_CH4                           (1U << 4) /* 0: IRQ on channel 4 is not set 1: IRQ on channel 4 is set */
-#define DMA_IRQ_CH3                           (1U << 3) /* 0: IRQ on channel 3 is not set 1: IRQ on channel 3 is set */
-#define DMA_IRQ_CH2                           (1U << 2) /* 0: IRQ on channel 2 is not set 1: IRQ on channel 2 is set */
-#define DMA_IRQ_CH1                           (1U << 1) /* 0: IRQ on channel 1 is not set 1: IRQ on channel 1 is set */
-#define DMA_IRQ_CH0                           (1U << 0) /* 0: IRQ on channel 0 is not set 1: IRQ on channel 0 is set */
+#define DMA_DMA_BUS_ERR7                      (1U << 15) /* 0: No bus error response is detected for channel 7 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR6                      (1U << 14) /* 0: No bus error response is detected for channel 6 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR5                      (1U << 13) /* 0: No bus error response is detected for channel 5 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR4                      (1U << 12) /* 0: No bus error response is detected for channel 4 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR3                      (1U << 11) /* 0: No bus error response is detected for channel 3 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR2                      (1U << 10) /* 0: No bus error response is detected for channel 2 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR1                      (1U << 9) /* 0: No bus error response is detected for channel 1 1: Bus error response detecte */
+#define DMA_DMA_BUS_ERR0                      (1U << 8) /* 0: No bus error response is detected for channel 0 1: Bus error response detecte */
+#define DMA_DMA_IRQ_CH7                       (1U << 7) /* 0: IRQ on channel 7 is not set 1: IRQ on channel 7 is set */
+#define DMA_DMA_IRQ_CH6                       (1U << 6) /* 0: IRQ on channel 6 is not set 1: IRQ on channel 6 is set */
+#define DMA_DMA_IRQ_CH5                       (1U << 5) /* 0: IRQ on channel 5 is not set 1: IRQ on channel 5 is set */
+#define DMA_DMA_IRQ_CH4                       (1U << 4) /* 0: IRQ on channel 4 is not set 1: IRQ on channel 4 is set */
+#define DMA_DMA_IRQ_CH3                       (1U << 3) /* 0: IRQ on channel 3 is not set 1: IRQ on channel 3 is set */
+#define DMA_DMA_IRQ_CH2                       (1U << 2) /* 0: IRQ on channel 2 is not set 1: IRQ on channel 2 is set */
+#define DMA_DMA_IRQ_CH1                       (1U << 1) /* 0: IRQ on channel 1 is not set 1: IRQ on channel 1 is set */
+#define DMA_DMA_IRQ_CH0                       (1U << 0) /* 0: IRQ on channel 0 is not set 1: IRQ on channel 0 is set */
 
 /* DMA_REQ_MUX Register */
 
-#define DMA67_SEL_MASK                        (0xF << 12) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA67_SEL_POS                         (12) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA45_SEL_MASK                        (0xF << 8) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA45_SEL_POS                         (8) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA23_SEL_MASK                        (0xF << 4) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA23_SEL_POS                         (4) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA01_SEL_MASK                        (0xF << 0) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
-#define DMA01_SEL_POS                         (0) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA67_SEL_MASK                    (0xF << 12) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA67_SEL_POS                     (12) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA45_SEL_MASK                    (0xF << 8) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA45_SEL_POS                     (8) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA23_SEL_MASK                    (0xF << 4) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA23_SEL_POS                     (4) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA01_SEL_MASK                    (0xF << 0) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
+#define DMA_DMA01_SEL_POS                     (0) /* Select which combination of peripherals are mapped on the DMA channels. The peri */
 
 /* DMA_RESET_INT_MASK Register */
 
-#define DMA_RESET_IRQ_ENABLE7                 (1U << 7) /* Writing a '1' will disable the IRQs in the DMA channel 7, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE6                 (1U << 6) /* Writing a '1' will disable the IRQs in the DMA channel 6, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE5                 (1U << 5) /* Writing a '1' will disable the IRQs in the DMA channel 5, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE4                 (1U << 4) /* Writing a '1' will disable the IRQs in the DMA channel 4, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE3                 (1U << 3) /* Writing a '1' will disable the IRQs in the DMA channel 3, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE2                 (1U << 2) /* Writing a '1' will disable the IRQs in the DMA channel 2, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE1                 (1U << 1) /* Writing a '1' will disable the IRQs in the DMA channel 1, writing a '0' has no e */
-#define DMA_RESET_IRQ_ENABLE0                 (1U << 0) /* Writing a '1' will disable the IRQs in the DMA channel 0, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE7             (1U << 7) /* Writing a '1' will disable the IRQs in the DMA channel 7, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE6             (1U << 6) /* Writing a '1' will disable the IRQs in the DMA channel 6, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE5             (1U << 5) /* Writing a '1' will disable the IRQs in the DMA channel 5, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE4             (1U << 4) /* Writing a '1' will disable the IRQs in the DMA channel 4, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE3             (1U << 3) /* Writing a '1' will disable the IRQs in the DMA channel 3, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE2             (1U << 2) /* Writing a '1' will disable the IRQs in the DMA channel 2, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE1             (1U << 1) /* Writing a '1' will disable the IRQs in the DMA channel 1, writing a '0' has no e */
+#define DMA_DMA_RESET_IRQ_ENABLE0             (1U << 0) /* Writing a '1' will disable the IRQs in the DMA channel 0, writing a '0' has no e */
 
 /* DMA_SET_INT_MASK Register */
 
-#define DMA_SET_IRQ_ENABLE7                   (1U << 7) /* Writing a '1' will enable the IRQs in the DMA channel 7, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE6                   (1U << 6) /* Writing a '1' will enable the IRQs in the DMA channel 6, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE5                   (1U << 5) /* Writing a '1' will enable the IRQs in the DMA channel 5, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE4                   (1U << 4) /* Writing a '1' will enable the IRQs in the DMA channel 4, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE3                   (1U << 3) /* Writing a '1' will enable the IRQs in the DMA channel 3, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE2                   (1U << 2) /* Writing a '1' will enable the IRQs in the DMA channel 2, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE1                   (1U << 1) /* Writing a '1' will enable the IRQs in the DMA channel 1, writing a '0' has no ef */
-#define DMA_SET_IRQ_ENABLE0                   (1U << 0) /* Writing a '1' will enable the IRQs in the DMA channel 0, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE7               (1U << 7) /* Writing a '1' will enable the IRQs in the DMA channel 7, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE6               (1U << 6) /* Writing a '1' will enable the IRQs in the DMA channel 6, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE5               (1U << 5) /* Writing a '1' will enable the IRQs in the DMA channel 5, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE4               (1U << 4) /* Writing a '1' will enable the IRQs in the DMA channel 4, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE3               (1U << 3) /* Writing a '1' will enable the IRQs in the DMA channel 3, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE2               (1U << 2) /* Writing a '1' will enable the IRQs in the DMA channel 2, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE1               (1U << 1) /* Writing a '1' will enable the IRQs in the DMA channel 1, writing a '0' has no ef */
+#define DMA_DMA_SET_IRQ_ENABLE0               (1U << 0) /* Writing a '1' will enable the IRQs in the DMA channel 0, writing a '0' has no ef */
 
 #endif /* __DA1470_DMA_H */

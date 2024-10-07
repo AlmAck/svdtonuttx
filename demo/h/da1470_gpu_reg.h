@@ -47,10 +47,10 @@
 
 /* GPU_CTRL Register */
 
-#define PWRS_B                                (1U << 6) /* Power save mode read port memories 0: Disabled 1: Enabled */
-#define GPU_RAM_MS_MASK                       (0xF << 2) /* Margin setting for GPU memories */
-#define GPU_RAM_MS_POS                        (2) /* Margin setting for GPU memories */
-#define GPU_RAM_MSE                           (1U << 1) /* Margin enable for GPU memories */
-#define GPU_EN                                (1U << 0) /* GPU enable 0:Enable 1:Disable */
+#define GPU_REG_PWRS_B                        (1U << 6) /* Power save mode read port memories 0: Disabled 1: Enabled */
+#define GPU_REG_GPU_RAM_MS_MASK               (0xF << 2) /* Margin setting for GPU memories */
+#define GPU_REG_GPU_RAM_MS_POS                (2) /* Margin setting for GPU memories */
+#define GPU_REG_GPU_RAM_MSE                   (1U << 1) /* Margin enable for GPU memories */
+#define GPU_REG_GPU_EN                        (1U << 0) /* GPU enable 0:Enable 1:Disable */
 
 #endif /* __DA1470_GPU_REG_H */

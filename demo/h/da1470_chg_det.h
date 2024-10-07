@@ -65,70 +65,70 @@
 
 /* CHG_DET_ADC_CTRL Register */
 
-#define ADC_V30_SEL                               (1U << 2) /* This bit-field determines the mode to be used when the intention is to measure t */
-#define USB_DM_TO_ADC_EN                          (1U << 1) /* 0 = Disables the connection of USBm to the GP_ADC 1 = Enables the connection of  */
-#define USB_DP_TO_ADC_EN                          (1U << 0) /* 0 = Disables the connection of USBp to the GP_ADC 1 = Enables the connection of  */
+#define CHG_DET_ADC_V30_SEL                       (1U << 2) /* This bit-field determines the mode to be used when the intention is to measure t */
+#define CHG_DET_USB_DM_TO_ADC_EN                  (1U << 1) /* 0 = Disables the connection of USBm to the GP_ADC 1 = Enables the connection of  */
+#define CHG_DET_USB_DP_TO_ADC_EN                  (1U << 0) /* 0 = Disables the connection of USBp to the GP_ADC 1 = Enables the connection of  */
 
 /* CHG_DET_DCD_TIMER Register */
 
-#define DCD_TIMER_MASK                            (0x3FF << 16) /* This bit-field returns the current value of the DCD time-out timer, also ticking */
-#define DCD_TIMER_POS                             (16) /* This bit-field returns the current value of the DCD time-out timer, also ticking */
-#define DCD_TIMEOUT_THRES_MASK                    (0x3FF << 0) /* This bit-field determines the value from which the Data Contact Detection (DCD)  */
-#define DCD_TIMEOUT_THRES_POS                     (0) /* This bit-field determines the value from which the Data Contact Detection (DCD)  */
+#define CHG_DET_DCD_TIMER_MASK                    (0x3FF << 16) /* This bit-field returns the current value of the DCD time-out timer, also ticking */
+#define CHG_DET_DCD_TIMER_POS                     (16) /* This bit-field returns the current value of the DCD time-out timer, also ticking */
+#define CHG_DET_DCD_TIMEOUT_THRES_MASK            (0x3FF << 0) /* This bit-field determines the value from which the Data Contact Detection (DCD)  */
+#define CHG_DET_DCD_TIMEOUT_THRES_POS             (0) /* This bit-field determines the value from which the Data Contact Detection (DCD)  */
 
 /* CHG_DET_FSM_CTRL Register */
 
-#define CHG_DET_EN                                (1U << 0) /* 0 = Charge detection FSM is disabled, analog part is controlled through the USB_ */
+#define CHG_DET_CHG_DET_EN                        (1U << 0) /* 0 = Charge detection FSM is disabled, analog part is controlled through the USB_ */
 
 /* CHG_DET_FSM_STATUS Register */
 
-#define CHG_DET_STATE_MASK                        (0xF << 9) /* This bit-field returns the current state of the charge detection block's FSM. Th */
-#define CHG_DET_STATE_POS                         (9) /* This bit-field returns the current state of the charge detection block's FSM. Th */
-#define NO_CONTACT_DETECTED                       (1U << 8) /* 0 = Contact is sensed on the Dp/Dm (data) pins by the FSM, during the Data Conta */
-#define PORT_2P4AMP_DETECTED                      (1U << 7) /* 0 = Port detection either not yet finished or finished without detecting a 2.4 A */
-#define PORT_2AMP_DETECTED                        (1U << 6) /* 0 = Port detection either not yet finished or finished without detecting a 2 Amp */
-#define PORT_1AMP_DETECTED                        (1U << 5) /* 0 = Port detection either not yet finished or finished without detecting a 1 Amp */
-#define PS2_PROP_PORT_DETECTED                    (1U << 4) /* 0 = Port detection either not yet finished or finished without detecting a PS2 o */
-#define DCP_PORT_DETECTED                         (1U << 3) /* 0 = Port detection either not yet finished or finished without detecting a DCP p */
-#define CDP_PORT_DETECTED                         (1U << 2) /* 0 = Port detection either not yet finished or finished without detecting a CDP p */
-#define SDP_PORT_DETECTED                         (1U << 1) /* 0 = Port detection either not yet finished or finished without detecting an SDP  */
-#define DETECTION_COMPLETED                       (1U << 0) /* 0 = Port detection not yet finished, FSM still active 1 = Port detection complet */
+#define CHG_DET_CHG_DET_STATE_MASK                (0xF << 9) /* This bit-field returns the current state of the charge detection block's FSM. Th */
+#define CHG_DET_CHG_DET_STATE_POS                 (9) /* This bit-field returns the current state of the charge detection block's FSM. Th */
+#define CHG_DET_NO_CONTACT_DETECTED               (1U << 8) /* 0 = Contact is sensed on the Dp/Dm (data) pins by the FSM, during the Data Conta */
+#define CHG_DET_PORT_2P4AMP_DETECTED              (1U << 7) /* 0 = Port detection either not yet finished or finished without detecting a 2.4 A */
+#define CHG_DET_PORT_2AMP_DETECTED                (1U << 6) /* 0 = Port detection either not yet finished or finished without detecting a 2 Amp */
+#define CHG_DET_PORT_1AMP_DETECTED                (1U << 5) /* 0 = Port detection either not yet finished or finished without detecting a 1 Amp */
+#define CHG_DET_PS2_PROP_PORT_DETECTED            (1U << 4) /* 0 = Port detection either not yet finished or finished without detecting a PS2 o */
+#define CHG_DET_DCP_PORT_DETECTED                 (1U << 3) /* 0 = Port detection either not yet finished or finished without detecting a DCP p */
+#define CHG_DET_CDP_PORT_DETECTED                 (1U << 2) /* 0 = Port detection either not yet finished or finished without detecting a CDP p */
+#define CHG_DET_SDP_PORT_DETECTED                 (1U << 1) /* 0 = Port detection either not yet finished or finished without detecting an SDP  */
+#define CHG_DET_DETECTION_COMPLETED               (1U << 0) /* 0 = Port detection not yet finished, FSM still active 1 = Port detection complet */
 
 /* CHG_DET_IRQ_CLEAR Register */
 
-#define CHG_DET_IRQ_CLR                           (1U << 0) /* Writing any value to this register clears the charge detection IRQ, reading alwa */
+#define CHG_DET_CHG_DET_IRQ_CLR                   (1U << 0) /* Writing any value to this register clears the charge detection IRQ, reading alwa */
 
 /* CHG_DET_IRQ_MASK Register */
 
-#define CHG_DET_IRQ_EN                            (1U << 0) /* 0 = Charge detection block's IRQ generation is disabled, interrupts to Cortex-M3 */
+#define CHG_DET_CHG_DET_IRQ_EN                    (1U << 0) /* 0 = Charge detection block's IRQ generation is disabled, interrupts to Cortex-M3 */
 
 /* CHG_DET_IRQ_STATUS Register */
 
-#define CHG_DET_IRQ                               (1U << 0) /* 0 = No new charge detection IRQ has been generated. 1 = A new charge detection I */
+#define CHG_DET_CHG_DET_IRQ                       (1U << 0) /* 0 = No new charge detection IRQ has been generated. 1 = A new charge detection I */
 
 /* CHG_DET_STATUS Register */
 
-#define USB_DM_VAL2                               (1U << 5) /* 0: USBp < 2.3V 1: USBp > 2.5V */
-#define USB_DP_VAL2                               (1U << 4) /* 0: USBp < 2.3V 1: USBp > 2.5V */
-#define USB_DM_VAL                                (1U << 3) /* 0 = USBm < 0.8V 1 = USBm > 1.5V (PS2 or Proprietary Charger) */
-#define USB_DP_VAL                                (1U << 2) /* 0 = USBp < 0.8V 1 = USBp > 1.5V (PS2 or Proprietary Charger) */
-#define USB_CHG_DET                               (1U << 1) /* 0 = Standard Downstream Port (SDP) or no Dp/Dm contact detected (nothing connect */
-#define USB_DCP_DET                               (1U << 0) /* 0 = Charging downstream port is detected 1 = Dedicated charger is detected It is */
+#define CHG_DET_USB_DM_VAL2                       (1U << 5) /* 0: USBp < 2.3V 1: USBp > 2.5V */
+#define CHG_DET_USB_DP_VAL2                       (1U << 4) /* 0: USBp < 2.3V 1: USBp > 2.5V */
+#define CHG_DET_USB_DM_VAL                        (1U << 3) /* 0 = USBm < 0.8V 1 = USBm > 1.5V (PS2 or Proprietary Charger) */
+#define CHG_DET_USB_DP_VAL                        (1U << 2) /* 0 = USBp < 0.8V 1 = USBp > 1.5V (PS2 or Proprietary Charger) */
+#define CHG_DET_USB_CHG_DET                       (1U << 1) /* 0 = Standard Downstream Port (SDP) or no Dp/Dm contact detected (nothing connect */
+#define CHG_DET_USB_DCP_DET                       (1U << 0) /* 0 = Charging downstream port is detected 1 = Dedicated charger is detected It is */
 
 /* CHG_DET_SW_CTRL Register */
 
-#define IDM_SINK_ON                               (1U << 5) /* 0 = Disables the Idm_sink to USBm 1 = Enables the Idm_sink to USBm */
-#define IDP_SINK_ON                               (1U << 4) /* 0 = Disables the Idp_sink to USBp 1 = Enables the Idp_sink to USBp */
-#define VDM_SRC_ON                                (1U << 3) /* 0 = Disables the Vdm_src 1 = Enables the Vdm to USBm and also the USB_DCP_DET st */
-#define VDP_SRC_ON                                (1U << 2) /* 0 = Disables the Vdp_src 1 = Enables the Vdp_src and also the USB_CHG_DET status */
-#define IDP_SRC_ON                                (1U << 1) /* 0 = Disables the Idp_src and the Rdm_dwn 1 = Enables the Idp_src and the Rdm_dwn */
-#define USB_CHARGE_ON                             (1U << 0) /* 0 = Disables the charge detection analog circuit 1 = Enables the charge detectio */
+#define CHG_DET_IDM_SINK_ON                       (1U << 5) /* 0 = Disables the Idm_sink to USBm 1 = Enables the Idm_sink to USBm */
+#define CHG_DET_IDP_SINK_ON                       (1U << 4) /* 0 = Disables the Idp_sink to USBp 1 = Enables the Idp_sink to USBp */
+#define CHG_DET_VDM_SRC_ON                        (1U << 3) /* 0 = Disables the Vdm_src 1 = Enables the Vdm to USBm and also the USB_DCP_DET st */
+#define CHG_DET_VDP_SRC_ON                        (1U << 2) /* 0 = Disables the Vdp_src 1 = Enables the Vdp_src and also the USB_CHG_DET status */
+#define CHG_DET_IDP_SRC_ON                        (1U << 1) /* 0 = Disables the Idp_src and the Rdm_dwn 1 = Enables the Idp_src and the Rdm_dwn */
+#define CHG_DET_USB_CHARGE_ON                     (1U << 0) /* 0 = Disables the charge detection analog circuit 1 = Enables the charge detectio */
 
 /* CHG_DET_TIMER Register */
 
-#define CHG_DET_TIMER_MASK                        (0xFF << 16) /* This bit-field returns the current value of the charge detection timer, which is */
-#define CHG_DET_TIMER_POS                         (16) /* This bit-field returns the current value of the charge detection timer, which is */
-#define CHG_DET_TIMER_THRES_MASK                  (0xFF << 0) /* This bit-field determines the value from which the charge detection timer starts */
-#define CHG_DET_TIMER_THRES_POS                   (0) /* This bit-field determines the value from which the charge detection timer starts */
+#define CHG_DET_CHG_DET_TIMER_MASK                (0xFF << 16) /* This bit-field returns the current value of the charge detection timer, which is */
+#define CHG_DET_CHG_DET_TIMER_POS                 (16) /* This bit-field returns the current value of the charge detection timer, which is */
+#define CHG_DET_CHG_DET_TIMER_THRES_MASK          (0xFF << 0) /* This bit-field determines the value from which the charge detection timer starts */
+#define CHG_DET_CHG_DET_TIMER_THRES_POS           (0) /* This bit-field determines the value from which the charge detection timer starts */
 
 #endif /* __DA1470_CHG_DET_H */

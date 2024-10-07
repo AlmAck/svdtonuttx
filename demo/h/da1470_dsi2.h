@@ -143,299 +143,299 @@
 
 /* DSI2_CFG_AUTOINSERT_EOTP Register */
 
-#define AUTOINSERT_EOTP                                    (1U << 0) /* Enables the Host Controller to automatically insert an EoTp short packet when sw */
+#define DSI2_AUTOINSERT_EOTP                               (1U << 0) /* Enables the Host Controller to automatically insert an EoTp short packet when sw */
 
 /* DSI2_CFG_BTA_H_TO_COUNT Register */
 
-#define BTA_H_TO_COUNT_MASK                                (0xFFFFFF << 0) /* Host Bust Turn Around (BTA) Timout. Sets the value of the DSI-2 Host Bus Turn Ar */
-#define BTA_H_TO_COUNT_POS                                 (0) /* Host Bust Turn Around (BTA) Timout. Sets the value of the DSI-2 Host Bus Turn Ar */
+#define DSI2_BTA_H_TO_COUNT_MASK                           (0xFFFFFF << 0) /* Host Bust Turn Around (BTA) Timout. Sets the value of the DSI-2 Host Bus Turn Ar */
+#define DSI2_BTA_H_TO_COUNT_POS                            (0) /* Host Bust Turn Around (BTA) Timout. Sets the value of the DSI-2 Host Bus Turn Ar */
 
 /* DSI2_CFG_CLK_LANE_EN Register */
 
-#define CLK_LANE_EN                                        (1U << 0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
+#define DSI2_CLK_LANE_EN                                   (1U << 0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
 
 /* DSI2_CFG_CONTINUOUS_HS_CLK Register */
 
-#define CONTINUOUS_HS_CLK                                  (1U << 0) /* Sets the Host Controller into non-continuous MIPI clock mode. When in non-contin */
+#define DSI2_CONTINUOUS_HS_CLK                             (1U << 0) /* Sets the Host Controller into non-continuous MIPI clock mode. When in non-contin */
 
 /* DSI2_CFG_DATA_LANE_EN Register */
 
-#define DATA_LANE_EN_MASK                                  (0x3 << 0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
-#define DATA_LANE_EN_POS                                   (0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
+#define DSI2_DATA_LANE_EN_MASK                             (0x3 << 0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
+#define DSI2_DATA_LANE_EN_POS                              (0) /* Forces PHY Enable n signals to 1'b1 when register is set to 1. See the DSI-2 Con */
 
 /* DSI2_CFG_DISABLE_BURST Register */
 
-#define DISABLE_BURST                                      (1U << 0) /* Disables packets combined into a burst. Normal DSI-2 operation is to combine pac */
+#define DSI2_DISABLE_BURST                                 (1U << 0) /* Disables packets combined into a burst. Normal DSI-2 operation is to combine pac */
 
 /* DSI2_CFG_DISBL_RX_CRC_CHECK Register */
 
-#define DISABLE_RX_CRC_CHECK                               (1U << 0) /* Prevents the Host from checking the payload CRC in long packets sent from the Pe */
+#define DSI2_DISABLE_RX_CRC_CHECK                          (1U << 0) /* Prevents the Host from checking the payload CRC in long packets sent from the Pe */
 
 /* DSI2_CFG_EXT_CMDS_AFT_EOTP Register */
 
-#define EXTRA_CMDS_AFTER_EOTP_MASK                         (0xFF << 0) /* Configures the DSI-2 Host Controller to send extra End Of Transmission Packets a */
-#define EXTRA_CMDS_AFTER_EOTP_POS                          (0) /* Configures the DSI-2 Host Controller to send extra End Of Transmission Packets a */
+#define DSI2_EXTRA_CMDS_AFTER_EOTP_MASK                    (0xFF << 0) /* Configures the DSI-2 Host Controller to send extra End Of Transmission Packets a */
+#define DSI2_EXTRA_CMDS_AFTER_EOTP_POS                     (0) /* Configures the DSI-2 Host Controller to send extra End Of Transmission Packets a */
 
 /* DSI2_CFG_HTX_TO_COUNT Register */
 
-#define HTX_TO_COUNT_MASK                                  (0xFFFFFF << 0) /* Host HS TX Timeout count, HS TX Timeout. Sets the value of the DSI-2 host High S */
-#define HTX_TO_COUNT_POS                                   (0) /* Host HS TX Timeout count, HS TX Timeout. Sets the value of the DSI-2 host High S */
+#define DSI2_HTX_TO_COUNT_MASK                             (0xFFFFFF << 0) /* Host HS TX Timeout count, HS TX Timeout. Sets the value of the DSI-2 host High S */
+#define DSI2_HTX_TO_COUNT_POS                              (0) /* Host HS TX Timeout count, HS TX Timeout. Sets the value of the DSI-2 host High S */
 
 /* DSI2_CFG_IRQ_MASK Register */
 
-#define IRQ_HS_TX_TIMEOUT                                  (1U << 31) /* host bta timeout, host controller host bta timeout port */
-#define IRQ_LP_RX_TIMEOUT                                  (1U << 30) /* low power rx timeout, host controller lp rx timeout port */
-#define IRQ_HOST_BTA_TIMEOUT                               (1U << 29) /* high speed tx timeout, host controller hs tx timeout port */
-#define IRQ_MAP_DIRECTORY_MASK                             (0xFFFFF << 9) /* map directory to dsi host controller status out port bit descriptions */
-#define IRQ_MAP_DIRECTORY_POS                              (9) /* map directory to dsi host controller status out port bit descriptions */
-#define IRQ_RX_PACKET_RCVD                                 (1U << 8) /* All RX packet payload data has been received */
-#define IRQ_RX_HEADER_RCVD                                 (1U << 7) /* RX packet header has been received */
-#define IRQ_RX_FIFO_UNDERFLOW                              (1U << 6) /* RX fifo underflow */
-#define IRQ_RX_FIFO_OVERFLOW                               (1U << 5) /* RX fifo overflow */
-#define IRQ_TX_FIFO_UNDERFLOW                              (1U << 4) /* TX fifo underflow */
-#define IRQ_TX_FIFO_OVERFLOW                               (1U << 3) /* TX fifo overflow */
-#define IRQ_DPHY_DIRECTION                                 (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
-#define IRQ_TX_DONE                                        (1U << 1) /* TX packet done */
-#define IRQ_STATE_NOT_IDLE                                 (1U << 0) /* State machine not idle */
+#define DSI2_IRQ_HS_TX_TIMEOUT                             (1U << 31) /* host bta timeout, host controller host bta timeout port */
+#define DSI2_IRQ_LP_RX_TIMEOUT                             (1U << 30) /* low power rx timeout, host controller lp rx timeout port */
+#define DSI2_IRQ_HOST_BTA_TIMEOUT                          (1U << 29) /* high speed tx timeout, host controller hs tx timeout port */
+#define DSI2_IRQ_MAP_DIRECTORY_MASK                        (0xFFFFF << 9) /* map directory to dsi host controller status out port bit descriptions */
+#define DSI2_IRQ_MAP_DIRECTORY_POS                         (9) /* map directory to dsi host controller status out port bit descriptions */
+#define DSI2_IRQ_RX_PACKET_RCVD                            (1U << 8) /* All RX packet payload data has been received */
+#define DSI2_IRQ_RX_HEADER_RCVD                            (1U << 7) /* RX packet header has been received */
+#define DSI2_IRQ_RX_FIFO_UNDERFLOW                         (1U << 6) /* RX fifo underflow */
+#define DSI2_IRQ_RX_FIFO_OVERFLOW                          (1U << 5) /* RX fifo overflow */
+#define DSI2_IRQ_TX_FIFO_UNDERFLOW                         (1U << 4) /* TX fifo underflow */
+#define DSI2_IRQ_TX_FIFO_OVERFLOW                          (1U << 3) /* TX fifo overflow */
+#define DSI2_IRQ_DPHY_DIRECTION                            (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
+#define DSI2_IRQ_TX_DONE                                   (1U << 1) /* TX packet done */
+#define DSI2_IRQ_STATE_NOT_IDLE                            (1U << 0) /* State machine not idle */
 
 /* DSI2_CFG_IRQ_MASK2 Register */
 
-#define IRQ_CRC_ERROR                                      (1U << 2) /* CRC error */
-#define IRQ_MULTI_BIT_ECC_ERROR                            (1U << 1) /* TX packet done */
-#define IRQ_SINGLE_BIT_ECC_ERROR                           (1U << 0) /* Single bit ecc error */
+#define DSI2_IRQ_CRC_ERROR                                 (1U << 2) /* CRC error */
+#define DSI2_IRQ_MULTI_BIT_ECC_ERROR                       (1U << 1) /* TX packet done */
+#define DSI2_IRQ_SINGLE_BIT_ECC_ERROR                      (1U << 0) /* Single bit ecc error */
 
 /* DSI2_CFG_IRQ_STATUS Register */
 
-#define IRQ_HS_TX_TIMEOUT                                  (1U << 31) /* host bta timeout, host controller host bta timeout port */
-#define IRQ_LP_RX_TIMEOUT                                  (1U << 30) /* low power rx timeout, host controller lp rx timeout port */
-#define IRQ_HOST_BTA_TIMEOUT                               (1U << 29) /* high speed tx timeout, host controller hs tx timeout port */
-#define IRQ_MAP_DIRECTORY_MASK                             (0xFFFFF << 9) /* map directory to dsi host controller status out port bit descriptions */
-#define IRQ_MAP_DIRECTORY_POS                              (9) /* map directory to dsi host controller status out port bit descriptions */
-#define IRQ_RX_PACKET_RCVD                                 (1U << 8) /* All RX packet payload data has been received */
-#define IRQ_RX_HEADER_RCVD                                 (1U << 7) /* RX packet header has been received */
-#define IRQ_RX_FIFO_UNDERFLOW                              (1U << 6) /* RX fifo underflow */
-#define IRQ_RX_FIFO_OVERFLOW                               (1U << 5) /* RX fifo overflow */
-#define IRQ_TX_FIFO_UNDERFLOW                              (1U << 4) /* TX fifo underflow */
-#define IRQ_TX_FIFO_OVERFLOW                               (1U << 3) /* TX fifo overflow */
-#define IRQ_DPHY_DIRECTION                                 (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
-#define IRQ_TX_DONE                                        (1U << 1) /* TX packet done */
-#define IRQ_STATE_NOT_IDLE                                 (1U << 0) /* State machine not idle */
+#define DSI2_IRQ_HS_TX_TIMEOUT                             (1U << 31) /* host bta timeout, host controller host bta timeout port */
+#define DSI2_IRQ_LP_RX_TIMEOUT                             (1U << 30) /* low power rx timeout, host controller lp rx timeout port */
+#define DSI2_IRQ_HOST_BTA_TIMEOUT                          (1U << 29) /* high speed tx timeout, host controller hs tx timeout port */
+#define DSI2_IRQ_MAP_DIRECTORY_MASK                        (0xFFFFF << 9) /* map directory to dsi host controller status out port bit descriptions */
+#define DSI2_IRQ_MAP_DIRECTORY_POS                         (9) /* map directory to dsi host controller status out port bit descriptions */
+#define DSI2_IRQ_RX_PACKET_RCVD                            (1U << 8) /* All RX packet payload data has been received */
+#define DSI2_IRQ_RX_HEADER_RCVD                            (1U << 7) /* RX packet header has been received */
+#define DSI2_IRQ_RX_FIFO_UNDERFLOW                         (1U << 6) /* RX fifo underflow */
+#define DSI2_IRQ_RX_FIFO_OVERFLOW                          (1U << 5) /* RX fifo overflow */
+#define DSI2_IRQ_TX_FIFO_UNDERFLOW                         (1U << 4) /* TX fifo underflow */
+#define DSI2_IRQ_TX_FIFO_OVERFLOW                          (1U << 3) /* TX fifo overflow */
+#define DSI2_IRQ_DPHY_DIRECTION                            (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
+#define DSI2_IRQ_TX_DONE                                   (1U << 1) /* TX packet done */
+#define DSI2_IRQ_STATE_NOT_IDLE                            (1U << 0) /* State machine not idle */
 
 /* DSI2_CFG_IRQ_STATUS2 Register */
 
-#define IRQ_CRC_ERROR                                      (1U << 2) /* CRC error */
-#define IRQ_MULTI_BIT_ECC_ERROR                            (1U << 1) /* TX packet done */
-#define IRQ_SINGLE_BIT_ECC_ERROR                           (1U << 0) /* Single bit ecc error */
+#define DSI2_IRQ_CRC_ERROR                                 (1U << 2) /* CRC error */
+#define DSI2_IRQ_MULTI_BIT_ECC_ERROR                       (1U << 1) /* TX packet done */
+#define DSI2_IRQ_SINGLE_BIT_ECC_ERROR                      (1U << 0) /* Single bit ecc error */
 
 /* DSI2_CFG_LRX_H_TO_COUNT Register */
 
-#define LRX_H_TO_COUNT_MASK                                (0xFFFFFF << 0) /* Host Low Power RX Timeout, LP_RX-H Timeout. Sets the value of the DSI-2 Low Powe */
-#define LRX_H_TO_COUNT_POS                                 (0) /* Host Low Power RX Timeout, LP_RX-H Timeout. Sets the value of the DSI-2 Low Powe */
+#define DSI2_LRX_H_TO_COUNT_MASK                           (0xFFFFFF << 0) /* Host Low Power RX Timeout, LP_RX-H Timeout. Sets the value of the DSI-2 Low Powe */
+#define DSI2_LRX_H_TO_COUNT_POS                            (0) /* Host Low Power RX Timeout, LP_RX-H Timeout. Sets the value of the DSI-2 Low Powe */
 
 /* DSI2_CFG_NUM_LANES Register */
 
-#define NUM_LANES_MASK                                     (0xF << 0) /* Sets the number of active lanes that are to be used for transmitting data. 4'b00 */
-#define NUM_LANES_POS                                      (0) /* Sets the number of active lanes that are to be used for transmitting data. 4'b00 */
+#define DSI2_NUM_LANES_MASK                                (0xF << 0) /* Sets the number of active lanes that are to be used for transmitting data. 4'b00 */
+#define DSI2_NUM_LANES_POS                                 (0) /* Sets the number of active lanes that are to be used for transmitting data. 4'b00 */
 
 /* DSI2_CFG_PACKET_CONTROL Register */
 
-#define PKT_BTA_ONLY                                       (1U << 26) /* Perform BTA only, no packet tx */
-#define PKT_BTA_AFTER_SENT                                 (1U << 25) /* Perform BTA after packet is sent */
-#define PKT_LP_OR_HS                                       (1U << 24) /* low power or high speed */
-#define PKT_HEADER_DTYPE_MASK                              (0x3F << 18) /* Packet header DSI Data Type */
-#define PKT_HEADER_DTYPE_POS                               (18) /* Packet header DSI Data Type */
-#define PKT_VC_MASK                                        (0x3 << 16) /* Virtual channel */
-#define PKT_VC_POS                                         (16) /* Virtual channel */
-#define PKT_WC_MASK                                        (0xFFFF << 0) /* Packet word count */
-#define PKT_WC_POS                                         (0) /* Packet word count */
+#define DSI2_PKT_BTA_ONLY                                  (1U << 26) /* Perform BTA only, no packet tx */
+#define DSI2_PKT_BTA_AFTER_SENT                            (1U << 25) /* Perform BTA after packet is sent */
+#define DSI2_PKT_LP_OR_HS                                  (1U << 24) /* low power or high speed */
+#define DSI2_PKT_HEADER_DTYPE_MASK                         (0x3F << 18) /* Packet header DSI Data Type */
+#define DSI2_PKT_HEADER_DTYPE_POS                          (18) /* Packet header DSI Data Type */
+#define DSI2_PKT_VC_MASK                                   (0x3 << 16) /* Virtual channel */
+#define DSI2_PKT_VC_POS                                    (16) /* Virtual channel */
+#define DSI2_PKT_WC_MASK                                   (0xFFFF << 0) /* Packet word count */
+#define DSI2_PKT_WC_POS                                    (0) /* Packet word count */
 
 /* DSI2_CFG_PKT_RD_LEVEL Register */
 
-#define PKT_FIFO_RD_LEVEL_MASK                             (0xFFFF << 0) /* Read level of APB to pkt interface fifo */
-#define PKT_FIFO_RD_LEVEL_POS                              (0) /* Read level of APB to pkt interface fifo */
+#define DSI2_PKT_FIFO_RD_LEVEL_MASK                        (0xFFFF << 0) /* Read level of APB to pkt interface fifo */
+#define DSI2_PKT_FIFO_RD_LEVEL_POS                         (0) /* Read level of APB to pkt interface fifo */
 
 /* DSI2_CFG_PKT_RX_HEADER Register */
 
-#define PKT_RX_HEADER_DTYPE_MASK                           (0x3F << 18) /* Packet header DSI Data Type */
-#define PKT_RX_HEADER_DTYPE_POS                            (18) /* Packet header DSI Data Type */
-#define PKT_RX_VC_MASK                                     (0x3 << 16) /* Virtual channel */
-#define PKT_RX_VC_POS                                      (16) /* Virtual channel */
-#define PKT_RX_WC_MASK                                     (0xFFFF << 0) /* Packet word count */
-#define PKT_RX_WC_POS                                      (0) /* Packet word count */
+#define DSI2_PKT_RX_HEADER_DTYPE_MASK                      (0x3F << 18) /* Packet header DSI Data Type */
+#define DSI2_PKT_RX_HEADER_DTYPE_POS                       (18) /* Packet header DSI Data Type */
+#define DSI2_PKT_RX_VC_MASK                                (0x3 << 16) /* Virtual channel */
+#define DSI2_PKT_RX_VC_POS                                 (16) /* Virtual channel */
+#define DSI2_PKT_RX_WC_MASK                                (0xFFFF << 0) /* Packet word count */
+#define DSI2_PKT_RX_WC_POS                                 (0) /* Packet word count */
 
 /* DSI2_CFG_PKT_RX_PAYLOAD Register */
 
-#define PKT_PKT_RX_PAYLOAD_MASK                            (0xFFFFFFFF << 0) /* APB to pkt interface RX payload read */
-#define PKT_PKT_RX_PAYLOAD_POS                             (0) /* APB to pkt interface RX payload read */
+#define DSI2_PKT_PKT_RX_PAYLOAD_MASK                       (0xFFFFFFFF << 0) /* APB to pkt interface RX payload read */
+#define DSI2_PKT_PKT_RX_PAYLOAD_POS                        (0) /* APB to pkt interface RX payload read */
 
 /* DSI2_CFG_PKT_STATUS Register */
 
-#define PKT_RX_PACKET_RCVD                                 (1U << 8) /* All RX packet payload data has been received */
-#define PKT_RX_HEADER_RCVD                                 (1U << 7) /* RX packet header has been received */
-#define PKT_RX_FIFO_UNDERFLOW                              (1U << 6) /* RX fifo underflow */
-#define PKT_RX_FIFO_OVERFLOW                               (1U << 5) /* RX fifo overflow */
-#define PKT_TX_FIFO_UNDERFLOW                              (1U << 4) /* TX fifo underflow */
-#define PKT_TX_FIFO_OVERFLOW                               (1U << 3) /* TX fifo overflow */
-#define PKT_DPHY_DIRECTION                                 (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
-#define PKT_TX_DONE                                        (1U << 1) /* TX packet done */
-#define PKT_STATE_NOT_IDLE                                 (1U << 0) /* State machine not idle */
+#define DSI2_PKT_RX_PACKET_RCVD                            (1U << 8) /* All RX packet payload data has been received */
+#define DSI2_PKT_RX_HEADER_RCVD                            (1U << 7) /* RX packet header has been received */
+#define DSI2_PKT_RX_FIFO_UNDERFLOW                         (1U << 6) /* RX fifo underflow */
+#define DSI2_PKT_RX_FIFO_OVERFLOW                          (1U << 5) /* RX fifo overflow */
+#define DSI2_PKT_TX_FIFO_UNDERFLOW                         (1U << 4) /* TX fifo underflow */
+#define DSI2_PKT_TX_FIFO_OVERFLOW                          (1U << 3) /* TX fifo overflow */
+#define DSI2_PKT_DPHY_DIRECTION                            (1U << 2) /* DPHY direction 0 - TX had control 1 - RX has control */
+#define DSI2_PKT_TX_DONE                                   (1U << 1) /* TX packet done */
+#define DSI2_PKT_STATE_NOT_IDLE                            (1U << 0) /* State machine not idle */
 
 /* DSI2_CFG_PKT_WR_LEVEL Register */
 
-#define PKT_FIFO_WR_LEVEL_MASK                             (0xFFFF << 0) /* Write level of APB to pkt interface fifo */
-#define PKT_FIFO_WR_LEVEL_POS                              (0) /* Write level of APB to pkt interface fifo */
+#define DSI2_PKT_FIFO_WR_LEVEL_MASK                        (0xFFFF << 0) /* Write level of APB to pkt interface fifo */
+#define DSI2_PKT_FIFO_WR_LEVEL_POS                         (0) /* Write level of APB to pkt interface fifo */
 
 /* DSI2_CFG_RX_ERROR_STATUS Register */
 
-#define BTA_TIMEOUT                                        (1U << 10) /* BTA timeout */
-#define REV_LP_DATA_RX_TIMEOUT                             (1U << 9) /* Reverse Low Power Data receive timeout */
-#define HS_FWD_TX_TIMEOUT                                  (1U << 8) /* High Speed forward TX timeout */
-#define CRC_ERR                                            (1U << 7) /* CRC error */
-#define ECC_SINGLE_BIT_ERR_POS_MASK                        (0xF << 3) /* Bit position for ECC single bit error */
-#define ECC_SINGLE_BIT_ERR_POS_POS                         (3) /* Bit position for ECC single bit error */
-#define ECC_MULTI_BIT_ERR                                  (1U << 1) /* ECC multi bit error */
-#define ECC_SINGLE_BIT_ERR                                 (1U << 0) /* ECC single bit error */
+#define DSI2_BTA_TIMEOUT                                   (1U << 10) /* BTA timeout */
+#define DSI2_REV_LP_DATA_RX_TIMEOUT                        (1U << 9) /* Reverse Low Power Data receive timeout */
+#define DSI2_HS_FWD_TX_TIMEOUT                             (1U << 8) /* High Speed forward TX timeout */
+#define DSI2_CRC_ERR                                       (1U << 7) /* CRC error */
+#define DSI2_ECC_SINGLE_BIT_ERR_POS_MASK                   (0xF << 3) /* Bit position for ECC single bit error */
+#define DSI2_ECC_SINGLE_BIT_ERR_POS_POS                    (3) /* Bit position for ECC single bit error */
+#define DSI2_ECC_MULTI_BIT_ERR                             (1U << 1) /* ECC multi bit error */
+#define DSI2_ECC_SINGLE_BIT_ERR                            (1U << 0) /* ECC single bit error */
 
 /* DSI2_CFG_SEND_PACKET Register */
 
-#define CFG_SEND_PACKET                                    (1U << 0) /* Tx send packet, writing to this register causes the packet described in dsi2 hos */
+#define DSI2_CFG_SEND_PACKET                               (1U << 0) /* Tx send packet, writing to this register causes the packet described in dsi2 hos */
 
 /* DSI2_CFG_STATUS_OUT Register */
 
-#define LAST_RCVD_TRIGGER_MASK                             (0xF << 16) /* Last received Trigger. Current status of the RxTriggerEsc[3:0] from the TX DPHY. */
-#define LAST_RCVD_TRIGGER_POS                              (16) /* Last received Trigger. Current status of the RxTriggerEsc[3:0] from the TX DPHY. */
-#define DSI2_PROT_VIOLATION                                (1U << 15) /* Protocol violation error from peripheral error report, cleared upon read */
-#define INVALID_TRANS_LENGTH                               (1U << 13) /* Transmission length error from peripheral error report, cleared upon read */
-#define DSI2_VC_ID_INVALID                                 (1U << 12) /* Invalid VC from peripheral error report, cleared upon read */
-#define DSI2_DT_NOT_RECOGNIZED                             (1U << 11) /* Invalid data type from peripheral error report, cleared upon read */
-#define LP_CHECKSUM_ERROR                                  (1U << 10) /* Checksum error (long packet only) from peripheral error report, cleared upon rea */
-#define ECC_MULTI_BIT_ERROR                                (1U << 9) /* ECC multi-bit error from peripheral error report (not corrected), cleared upon r */
-#define ECC_1BIT_ERROR                                     (1U << 8) /* ECC single bit error from peripheral error report (and corrected), cleared upon  */
-#define CONTENTION_DETECTED                                (1U << 7) /* Contention Detection from peripheral error report, cleared upon read */
-#define FALSE_CTRL_ERROR                                   (1U << 6) /* False Control Error from peripheral error report, cleared upon read */
-#define PERIPH_TIMEOUT_ERROR                               (1U << 5) /* Peripheral Timeout error from peripheral error report, cleared upon read */
-#define LP_TRANS_SYNC_ERROR                                (1U << 4) /* Low Power Transmit Sync error from peripheral error report, cleared upon read */
-#define ESC_MODE_ENTRY_CMD_ERROR                           (1U << 3) /* Escape Mode Entry Command Error from peripheral error report, cleared upon read */
-#define EOT_SYNC_ERROR                                     (1U << 2) /* End of Transmission Sync Error from peripheral error report, cleared upon read */
-#define SOT_SYNC_ERROR                                     (1U << 1) /* Start of Transmission Sync Error from peripheral error report, cleared upon read */
-#define SOT_ERROR                                          (1U << 0) /* Start of Transmission Error from peripheral error report, cleared upon read */
+#define DSI2_LAST_RCVD_TRIGGER_MASK                        (0xF << 16) /* Last received Trigger. Current status of the RxTriggerEsc[3:0] from the TX DPHY. */
+#define DSI2_LAST_RCVD_TRIGGER_POS                         (16) /* Last received Trigger. Current status of the RxTriggerEsc[3:0] from the TX DPHY. */
+#define DSI2_DSI2_PROT_VIOLATION                           (1U << 15) /* Protocol violation error from peripheral error report, cleared upon read */
+#define DSI2_INVALID_TRANS_LENGTH                          (1U << 13) /* Transmission length error from peripheral error report, cleared upon read */
+#define DSI2_DSI2_VC_ID_INVALID                            (1U << 12) /* Invalid VC from peripheral error report, cleared upon read */
+#define DSI2_DSI2_DT_NOT_RECOGNIZED                        (1U << 11) /* Invalid data type from peripheral error report, cleared upon read */
+#define DSI2_LP_CHECKSUM_ERROR                             (1U << 10) /* Checksum error (long packet only) from peripheral error report, cleared upon rea */
+#define DSI2_ECC_MULTI_BIT_ERROR                           (1U << 9) /* ECC multi-bit error from peripheral error report (not corrected), cleared upon r */
+#define DSI2_ECC_1BIT_ERROR                                (1U << 8) /* ECC single bit error from peripheral error report (and corrected), cleared upon  */
+#define DSI2_CONTENTION_DETECTED                           (1U << 7) /* Contention Detection from peripheral error report, cleared upon read */
+#define DSI2_FALSE_CTRL_ERROR                              (1U << 6) /* False Control Error from peripheral error report, cleared upon read */
+#define DSI2_PERIPH_TIMEOUT_ERROR                          (1U << 5) /* Peripheral Timeout error from peripheral error report, cleared upon read */
+#define DSI2_LP_TRANS_SYNC_ERROR                           (1U << 4) /* Low Power Transmit Sync error from peripheral error report, cleared upon read */
+#define DSI2_ESC_MODE_ENTRY_CMD_ERROR                      (1U << 3) /* Escape Mode Entry Command Error from peripheral error report, cleared upon read */
+#define DSI2_EOT_SYNC_ERROR                                (1U << 2) /* End of Transmission Sync Error from peripheral error report, cleared upon read */
+#define DSI2_SOT_SYNC_ERROR                                (1U << 1) /* Start of Transmission Sync Error from peripheral error report, cleared upon read */
+#define DSI2_SOT_ERROR                                     (1U << 0) /* Start of Transmission Error from peripheral error report, cleared upon read */
 
 /* DSI2_CFG_TWAKEUP Register */
 
-#define TWAKEUP_MASK                                       (0x7FFFF << 0) /* PHY Twakeup timing parameter. Sets the number of clk_esc clock periods to keep a */
-#define TWAKEUP_POS                                        (0) /* PHY Twakeup timing parameter. Sets the number of clk_esc clock periods to keep a */
+#define DSI2_TWAKEUP_MASK                                  (0x7FFFF << 0) /* PHY Twakeup timing parameter. Sets the number of clk_esc clock periods to keep a */
+#define DSI2_TWAKEUP_POS                                   (0) /* PHY Twakeup timing parameter. Sets the number of clk_esc clock periods to keep a */
 
 /* DSI2_CFG_TX_GAP Register */
 
-#define TX_GAP_MASK                                        (0xFF << 0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
-#define TX_GAP_POS                                         (0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
+#define DSI2_TX_GAP_MASK                                   (0xFF << 0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
+#define DSI2_TX_GAP_POS                                    (0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
 
 /* DSI2_CFG_TX_PAYLOAD Register */
 
-#define CFG_TX_PAYLOAD_MASK                                (0xFFFFFFFF << 0) /* Tx Payload data write register. Writes to this registers load the payload fo wit */
-#define CFG_TX_PAYLOAD_POS                                 (0) /* Tx Payload data write register. Writes to this registers load the payload fo wit */
+#define DSI2_CFG_TX_PAYLOAD_MASK                           (0xFFFFFFFF << 0) /* Tx Payload data write register. Writes to this registers load the payload fo wit */
+#define DSI2_CFG_TX_PAYLOAD_POS                            (0) /* Tx Payload data write register. Writes to this registers load the payload fo wit */
 
 /* DSI2_CFG_T_POST Register */
 
-#define T_POST_MASK                                        (0xFF << 0) /* Sets the number of byte clock periods (clk input) to wait before putting the clo */
-#define T_POST_POS                                         (0) /* Sets the number of byte clock periods (clk input) to wait before putting the clo */
+#define DSI2_T_POST_MASK                                   (0xFF << 0) /* Sets the number of byte clock periods (clk input) to wait before putting the clo */
+#define DSI2_T_POST_POS                                    (0) /* Sets the number of byte clock periods (clk input) to wait before putting the clo */
 
 /* DSI2_CFG_T_PRE Register */
 
-#define T_PRE_MASK                                         (0xFF << 0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
-#define T_PRE_POS                                          (0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
+#define DSI2_T_PRE_MASK                                    (0xFF << 0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
+#define DSI2_T_PRE_POS                                     (0) /* Sets the number of byte clock periods (clk input) that the controller will wait  */
 
 /* DSI2_CFG_VID_BLLP_MODE Register */
 
-#define VID_BLLP_MODE                                      (1U << 0) /* Optimize bllp periods to Low Power mode when possible 0 blanking packets are sen */
+#define DSI2_VID_BLLP_MODE                                 (1U << 0) /* Optimize bllp periods to Low Power mode when possible 0 blanking packets are sen */
 
 /* DSI2_CFG_VID_ENABLE Register */
 
-#define VID_ENABLE                                         (1U << 0) /* Enables the video interface 0 = video interface off; all packets go through rx p */
+#define DSI2_VID_ENABLE                                    (1U << 0) /* Enables the video interface 0 = video interface off; all packets go through rx p */
 
 /* DSI2_CFG_VID_HBP Register */
 
-#define VID_HBP_MASK                                       (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal back porch blank */
-#define VID_HBP_POS                                        (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal back porch blank */
+#define DSI2_VID_HBP_MASK                                  (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal back porch blank */
+#define DSI2_VID_HBP_POS                                   (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal back porch blank */
 
 /* DSI2_CFG_VID_HFP Register */
 
-#define VID_HFP_MASK                                       (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal front porch blan */
-#define VID_HFP_POS                                        (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal front porch blan */
+#define DSI2_VID_HFP_MASK                                  (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal front porch blan */
+#define DSI2_VID_HFP_POS                                   (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal front porch blan */
 
 /* DSI2_CFG_VID_HSA Register */
 
-#define VID_HSA_MASK                                       (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal sync width fille */
-#define VID_HSA_POS                                        (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal sync width fille */
+#define DSI2_VID_HSA_MASK                                  (0xFFFF << 0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal sync width fille */
+#define DSI2_VID_HSA_POS                                   (0) /* Sets the DSI-2 packet payload size, in bytes, of the horizontal sync width fille */
 
 /* DSI2_CFG_VID_HSYNC_POLARITY Register */
 
-#define VID_HSYNC_POLARITY                                 (1U << 0) /* Sets Polarity of vid_hsync input, 0 active low, 1 active high */
+#define DSI2_VID_HSYNC_POLARITY                            (1U << 0) /* Sets Polarity of vid_hsync input, 0 active low, 1 active high */
 
 /* DSI2_CFG_VID_OVERRIDE Register */
 
-#define VID_OVERRIDE                                       (1U << 0) /* Overrides internal counters and uses values on configuration inputs. 1b0 Sync ti */
+#define DSI2_VID_OVERRIDE                                  (1U << 0) /* Overrides internal counters and uses values on configuration inputs. 1b0 Sync ti */
 
 /* DSI2_CFG_VID_PACKETS_P_LINE Register */
 
-#define VID_PACKETS_P_LINE_MASK                            (0x7 << 0) /* Sets the number of packets that will be sent for a video line. Default reset val */
-#define VID_PACKETS_P_LINE_POS                             (0) /* Sets the number of packets that will be sent for a video line. Default reset val */
+#define DSI2_VID_PACKETS_P_LINE_MASK                       (0x7 << 0) /* Sets the number of packets that will be sent for a video line. Default reset val */
+#define DSI2_VID_PACKETS_P_LINE_POS                        (0) /* Sets the number of packets that will be sent for a video line. Default reset val */
 
 /* DSI2_CFG_VID_PIX_ALIGNMENT Register */
 
-#define VID_PIX_ALIGNMENT                                  (1U << 0) /* Some RGB modes can be aligned either MSB or LSB onto the video_pX[35:0] inputs.  */
+#define DSI2_VID_PIX_ALIGNMENT                             (1U << 0) /* Some RGB modes can be aligned either MSB or LSB onto the video_pX[35:0] inputs.  */
 
 /* DSI2_CFG_VID_PIX_FORMAT Register */
 
-#define VID_PIX_FORMAT_MASK                                (0x3F << 0) /* Sets the DSI-2 packet type of the pixels. Value is the actual data type sent acr */
-#define VID_PIX_FORMAT_POS                                 (0) /* Sets the DSI-2 packet type of the pixels. Value is the actual data type sent acr */
+#define DSI2_VID_PIX_FORMAT_MASK                           (0x3F << 0) /* Sets the DSI-2 packet type of the pixels. Value is the actual data type sent acr */
+#define DSI2_VID_PIX_FORMAT_POS                            (0) /* Sets the DSI-2 packet type of the pixels. Value is the actual data type sent acr */
 
 /* DSI2_CFG_VID_PIX_PAYLOAD_SIZE Register */
 
-#define VID_PIX_PAYLOAD_SIZE_MASK                          (0xFFFF << 0) /* The number of bytes in a video payload packet. Normally this can be set to zero  */
-#define VID_PIX_PAYLOAD_SIZE_POS                           (0) /* The number of bytes in a video payload packet. Normally this can be set to zero  */
+#define DSI2_VID_PIX_PAYLOAD_SIZE_MASK                     (0xFFFF << 0) /* The number of bytes in a video payload packet. Normally this can be set to zero  */
+#define DSI2_VID_PIX_PAYLOAD_SIZE_POS                      (0) /* The number of bytes in a video payload packet. Normally this can be set to zero  */
 
 /* DSI2_CFG_VID_PIX_P_PACKET Register */
 
-#define VID_PIX_P_PACKET_MASK                              (0xFFFF << 0) /* Sets the number of pixels that are sent in a packet for each video line. If cfg_ */
-#define VID_PIX_P_PACKET_POS                               (0) /* Sets the number of pixels that are sent in a packet for each video line. If cfg_ */
+#define DSI2_VID_PIX_P_PACKET_MASK                         (0xFFFF << 0) /* Sets the number of pixels that are sent in a packet for each video line. If cfg_ */
+#define DSI2_VID_PIX_P_PACKET_POS                          (0) /* Sets the number of pixels that are sent in a packet for each video line. If cfg_ */
 
 /* DSI2_CFG_VID_START_DELAY Register */
 
-#define VID_START_DELAY_MASK                               (0xFFFF << 0) /* In order to optimize DSI-2 utility, the video interface buffers a certain number */
-#define VID_START_DELAY_POS                                (0) /* In order to optimize DSI-2 utility, the video interface buffers a certain number */
+#define DSI2_VID_START_DELAY_MASK                          (0xFFFF << 0) /* In order to optimize DSI-2 utility, the video interface buffers a certain number */
+#define DSI2_VID_START_DELAY_POS                           (0) /* In order to optimize DSI-2 utility, the video interface buffers a certain number */
 
 /* DSI2_CFG_VID_USE_NULL_PKT_BLLP Register */
 
-#define VID_USE_NULL_PKT_BLLP                              (1U << 0) /* Selects type of blanking packet to be sent during bllp region 0 - Blanking packe */
+#define DSI2_VID_USE_NULL_PKT_BLLP                         (1U << 0) /* Selects type of blanking packet to be sent during bllp region 0 - Blanking packe */
 
 /* DSI2_CFG_VID_VACTIVE Register */
 
-#define VID_VACTIVE_MASK                                   (0xFFFF << 0) /* Sets the number of lines in the vertical active area. This input is ignored if c */
-#define VID_VACTIVE_POS                                    (0) /* Sets the number of lines in the vertical active area. This input is ignored if c */
+#define DSI2_VID_VACTIVE_MASK                              (0xFFFF << 0) /* Sets the number of lines in the vertical active area. This input is ignored if c */
+#define DSI2_VID_VACTIVE_POS                               (0) /* Sets the number of lines in the vertical active area. This input is ignored if c */
 
 /* DSI2_CFG_VID_VBP Register */
 
-#define VID_VBP_MASK                                       (0xFFFF << 0) /* Sets the number of lines in the vertical back porch. This input is ignored if cf */
-#define VID_VBP_POS                                        (0) /* Sets the number of lines in the vertical back porch. This input is ignored if cf */
+#define DSI2_VID_VBP_MASK                                  (0xFFFF << 0) /* Sets the number of lines in the vertical back porch. This input is ignored if cf */
+#define DSI2_VID_VBP_POS                                   (0) /* Sets the number of lines in the vertical back porch. This input is ignored if cf */
 
 /* DSI2_CFG_VID_VC Register */
 
-#define VID_VC_MASK                                        (0x3 << 0) /* Sets the Virtual Channel (VC) of packets that will be sent to the receive packet */
-#define VID_VC_POS                                         (0) /* Sets the Virtual Channel (VC) of packets that will be sent to the receive packet */
+#define DSI2_VID_VC_MASK                                   (0x3 << 0) /* Sets the Virtual Channel (VC) of packets that will be sent to the receive packet */
+#define DSI2_VID_VC_POS                                    (0) /* Sets the Virtual Channel (VC) of packets that will be sent to the receive packet */
 
 /* DSI2_CFG_VID_VFP Register */
 
-#define VID_VFP_MASK                                       (0xFFFF << 0) /* Sets the number of lines in the vertical front porch. This input is ignored if c */
-#define VID_VFP_POS                                        (0) /* Sets the number of lines in the vertical front porch. This input is ignored if c */
+#define DSI2_VID_VFP_MASK                                  (0xFFFF << 0) /* Sets the number of lines in the vertical front porch. This input is ignored if c */
+#define DSI2_VID_VFP_POS                                   (0) /* Sets the number of lines in the vertical front porch. This input is ignored if c */
 
 /* DSI2_CFG_VID_VIDEO_MODE Register */
 
-#define VID_VID_VIDEO_MODE_MASK                            (0x3 << 0) /* Select DSI-2 video mode that the host VID module should generate packets for. 2b */
-#define VID_VID_VIDEO_MODE_POS                             (0) /* Select DSI-2 video mode that the host VID module should generate packets for. 2b */
+#define DSI2_VID_VID_VIDEO_MODE_MASK                       (0x3 << 0) /* Select DSI-2 video mode that the host VID module should generate packets for. 2b */
+#define DSI2_VID_VID_VIDEO_MODE_POS                        (0) /* Select DSI-2 video mode that the host VID module should generate packets for. 2b */
 
 /* DSI2_CFG_VID_VSYNC_POLARITY Register */
 
-#define VID_VSYNC_POLARITY                                 (1U << 0) /* Sets polarity of vid_vsync input, 0 active low, 1 active high */
+#define DSI2_VID_VSYNC_POLARITY                            (1U << 0) /* Sets polarity of vid_vsync input, 0 active low, 1 active high */
 
 #endif /* __DA1470_DSI2_H */

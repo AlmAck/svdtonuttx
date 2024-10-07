@@ -195,532 +195,532 @@
 
 /* I3C_BUS_FREE_AVAIL_TIMING Register */
 
-#define BUS_FREE_TIME_MASK                             (0xFFFF << 0) /* This register field is used only in Master mode of operation  I3C Bus Free Count */
-#define BUS_FREE_TIME_POS                              (0) /* This register field is used only in Master mode of operation  I3C Bus Free Count */
+#define I3C_BUS_FREE_TIME_MASK                         (0xFFFF << 0) /* This register field is used only in Master mode of operation  I3C Bus Free Count */
+#define I3C_BUS_FREE_TIME_POS                          (0) /* This register field is used only in Master mode of operation  I3C Bus Free Count */
 
 /* I3C_COMMAND_QUEUE_PORT Register */
 
-#define COMMAND_MASK                                   (0xFFFFFFFF << 0) /* 32 bit command */
-#define COMMAND_POS                                    (0) /* 32 bit command */
+#define I3C_COMMAND_MASK                               (0xFFFFFFFF << 0) /* 32 bit command */
+#define I3C_COMMAND_POS                                (0) /* 32 bit command */
 
 /* I3C_DATA_BUFFER_STAT_LEVEL Register */
 
-#define RX_BUF_BLR_MASK                                (0xFF << 16) /* Receive Buffer Level Value.  Contains the number of valid data entries in the re */
-#define RX_BUF_BLR_POS                                 (16) /* Receive Buffer Level Value.  Contains the number of valid data entries in the re */
-#define TX_BUF_EMPTY_LOC_MASK                          (0xFF << 0) /* Transmit Buffer Empty Level Value.  Contains the number of empty locations in th */
-#define TX_BUF_EMPTY_LOC_POS                           (0) /* Transmit Buffer Empty Level Value.  Contains the number of empty locations in th */
+#define I3C_RX_BUF_BLR_MASK                            (0xFF << 16) /* Receive Buffer Level Value.  Contains the number of valid data entries in the re */
+#define I3C_RX_BUF_BLR_POS                             (16) /* Receive Buffer Level Value.  Contains the number of valid data entries in the re */
+#define I3C_TX_BUF_EMPTY_LOC_MASK                      (0xFF << 0) /* Transmit Buffer Empty Level Value.  Contains the number of empty locations in th */
+#define I3C_TX_BUF_EMPTY_LOC_POS                       (0) /* Transmit Buffer Empty Level Value.  Contains the number of empty locations in th */
 
 /* I3C_DATA_BUFFER_THLD_CTRL Register */
 
-#define RX_START_THLD_MASK                             (0x7 << 24) /* Receive Start Threshold Value.  In master mode of operation when the controller  */
-#define RX_START_THLD_POS                              (24) /* Receive Start Threshold Value.  In master mode of operation when the controller  */
-#define TX_START_THLD_MASK                             (0x7 << 16) /* Transfer Start Threshold Value.  In master mode of operation when the controller */
-#define TX_START_THLD_POS                              (16) /* Transfer Start Threshold Value.  In master mode of operation when the controller */
-#define RX_BUF_THLD_MASK                               (0x7 << 8) /* Receive Buffer Threshold Value.  This field controls the number of entries (or a */
-#define RX_BUF_THLD_POS                                (8) /* Receive Buffer Threshold Value.  This field controls the number of entries (or a */
-#define TX_EMPTY_BUF_THLD_MASK                         (0x7 << 0) /* Transmit Buffer Threshold Value.  This field controls the number of empty locati */
-#define TX_EMPTY_BUF_THLD_POS                          (0) /* Transmit Buffer Threshold Value.  This field controls the number of empty locati */
+#define I3C_RX_START_THLD_MASK                         (0x7 << 24) /* Receive Start Threshold Value.  In master mode of operation when the controller  */
+#define I3C_RX_START_THLD_POS                          (24) /* Receive Start Threshold Value.  In master mode of operation when the controller  */
+#define I3C_TX_START_THLD_MASK                         (0x7 << 16) /* Transfer Start Threshold Value.  In master mode of operation when the controller */
+#define I3C_TX_START_THLD_POS                          (16) /* Transfer Start Threshold Value.  In master mode of operation when the controller */
+#define I3C_RX_BUF_THLD_MASK                           (0x7 << 8) /* Receive Buffer Threshold Value.  This field controls the number of entries (or a */
+#define I3C_RX_BUF_THLD_POS                            (8) /* Receive Buffer Threshold Value.  This field controls the number of entries (or a */
+#define I3C_TX_EMPTY_BUF_THLD_MASK                     (0x7 << 0) /* Transmit Buffer Threshold Value.  This field controls the number of empty locati */
+#define I3C_TX_EMPTY_BUF_THLD_POS                      (0) /* Transmit Buffer Threshold Value.  This field controls the number of empty locati */
 
 /* I3C_DEVICE_ADDR Register */
 
-#define DYNAMIC_ADDR_VALID                             (1U << 31) /* Dynamic Address Valid  This bit is used to control whether the DYNAMIC_ADDR is v */
-#define DYNAMIC_ADDR_MASK                              (0x7F << 16) /* Device Dynamic Address.  This field is used to program the Device Dynamic Addres */
-#define DYNAMIC_ADDR_POS                               (16) /* Device Dynamic Address.  This field is used to program the Device Dynamic Addres */
+#define I3C_DYNAMIC_ADDR_VALID                         (1U << 31) /* Dynamic Address Valid  This bit is used to control whether the DYNAMIC_ADDR is v */
+#define I3C_DYNAMIC_ADDR_MASK                          (0x7F << 16) /* Device Dynamic Address.  This field is used to program the Device Dynamic Addres */
+#define I3C_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address.  This field is used to program the Device Dynamic Addres */
 
 /* I3C_DEVICE_ADDR_TABLE_PTR Register */
 
-#define DEV_ADDR_TABLE_DEPTH_MASK                      (0xFFFF << 16) /* Depth of Device Address Table */
-#define DEV_ADDR_TABLE_DEPTH_POS                       (16) /* Depth of Device Address Table */
-#define P_DEV_ADDR_TABLE_START_ADDR_MASK               (0xFFFF << 0) /* Start Address of Device Address Table. */
-#define P_DEV_ADDR_TABLE_START_ADDR_POS                (0) /* Start Address of Device Address Table. */
+#define I3C_DEV_ADDR_TABLE_DEPTH_MASK                  (0xFFFF << 16) /* Depth of Device Address Table */
+#define I3C_DEV_ADDR_TABLE_DEPTH_POS                   (16) /* Depth of Device Address Table */
+#define I3C_P_DEV_ADDR_TABLE_START_ADDR_MASK           (0xFFFF << 0) /* Start Address of Device Address Table. */
+#define I3C_P_DEV_ADDR_TABLE_START_ADDR_POS            (0) /* Start Address of Device Address Table. */
 
 /* I3C_DEVICE_CTRL_EXTENDED Register */
 
-#define DEV_OPERATION_MODE_MASK                        (0x3 << 0) /* This bit is used to select the Device Operation Mode before the controller is en */
-#define DEV_OPERATION_MODE_POS                         (0) /* This bit is used to select the Device Operation Mode before the controller is en */
+#define I3C_DEV_OPERATION_MODE_MASK                    (0x3 << 0) /* This bit is used to select the Device Operation Mode before the controller is en */
+#define I3C_DEV_OPERATION_MODE_POS                     (0) /* This bit is used to select the Device Operation Mode before the controller is en */
 
 /* I3C_DEVICE_CTRL Register */
 
-#define ENABLE                                         (1U << 31) /* Controls whether or not DWC_mipi_i3c is enabled.  1: Enables the DWC_mipi_i3c co */
-#define RESUME                                         (1U << 30) /* DWC_mipi_i3c Resume.  This bit is used to resume the Controller after it goes to */
-#define ABORT                                          (1U << 29) /* DWC_mipi_i3c Abort.  This bit is used in master mode of operation.  This bit all */
-#define DMA_ENABLE_I3C                                 (1U << 28) /* DMA Handshake Interface Enable.  This bit is used to enable or disable the DMA H */
-#define HOT_JOIN_CTRL                                  (1U << 8) /* Hot-Join Ack/Nack Control  This bit is used in master mode of operation.  This b */
-#define I2C_SLAVE_PRESENT                              (1U << 7) /* I2C Slave Present  This bit is used in master mode of operation.  This Bit indic */
-#define IBA_INCLUDE                                    (1U << 0) /* I3C Broadcast Address include.  This bit is used in master mode of operation.  T */
+#define I3C_ENABLE                                     (1U << 31) /* Controls whether or not DWC_mipi_i3c is enabled.  1: Enables the DWC_mipi_i3c co */
+#define I3C_RESUME                                     (1U << 30) /* DWC_mipi_i3c Resume.  This bit is used to resume the Controller after it goes to */
+#define I3C_ABORT                                      (1U << 29) /* DWC_mipi_i3c Abort.  This bit is used in master mode of operation.  This bit all */
+#define I3C_DMA_ENABLE_I3C                             (1U << 28) /* DMA Handshake Interface Enable.  This bit is used to enable or disable the DMA H */
+#define I3C_HOT_JOIN_CTRL                              (1U << 8) /* Hot-Join Ack/Nack Control  This bit is used in master mode of operation.  This b */
+#define I3C_I2C_SLAVE_PRESENT                          (1U << 7) /* I2C Slave Present  This bit is used in master mode of operation.  This Bit indic */
+#define I3C_IBA_INCLUDE                                (1U << 0) /* I3C Broadcast Address include.  This bit is used in master mode of operation.  T */
 
 /* I3C_DEV_ADDR_TABLE_LOC1 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC2 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC3 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC4 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC5 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC6 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC7 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_ADDR_TABLE_LOC8 Register */
 
-#define LEGACY_I2C_DEVICE                              (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
-#define DEV_NACK_RETRY_CNT_MASK                        (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_NACK_RETRY_CNT_POS                         (29) /* This field is used to set the Device NACK Retry count for the particular device. */
-#define DEV_DYNAMIC_ADDR_MASK                          (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_DYNAMIC_ADDR_POS                           (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
-#define DEV_STATIC_ADDR_MASK                           (0x7F << 0) /* Device Static Address. */
-#define DEV_STATIC_ADDR_POS                            (0) /* Device Static Address. */
+#define I3C_LEGACY_I2C_DEVICE                          (1U << 31) /* Legacy I2C device or not.  This bit should be set to 1 if the device is a legacy */
+#define I3C_DEV_NACK_RETRY_CNT_MASK                    (0x3 << 29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_NACK_RETRY_CNT_POS                     (29) /* This field is used to set the Device NACK Retry count for the particular device. */
+#define I3C_DEV_DYNAMIC_ADDR_MASK                      (0xFF << 16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_DYNAMIC_ADDR_POS                       (16) /* Device Dynamic Address with parity. The MSB, bit[23], should be programmed with  */
+#define I3C_DEV_STATIC_ADDR_MASK                       (0x7F << 0) /* Device Static Address. */
+#define I3C_DEV_STATIC_ADDR_POS                        (0) /* Device Static Address. */
 
 /* I3C_DEV_CHAR_TABLE1_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE1_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE1_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE1_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE2_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE2_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE2_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE2_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE3_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE3_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE3_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE3_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE4_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE4_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE4_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE4_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE5_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE5_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE5_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE5_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE6_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE6_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE6_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE6_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE7_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE7_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE7_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE7_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE8_LOC1 Register */
 
-#define LSB_PROVISIONAL_ID_MASK                        (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
-#define LSB_PROVISIONAL_ID_POS                         (0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_MASK                    (0xFFFFFFFF << 0) /* The LSB 32-bit value of Provisional-ID */
+#define I3C_LSB_PROVISIONAL_ID_POS                     (0) /* The LSB 32-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE8_LOC2 Register */
 
-#define MSB_PROVISIONAL_ID_MASK                        (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
-#define MSB_PROVISIONAL_ID_POS                         (0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_MASK                    (0xFFFF << 0) /* The MSB 16-bit value of Provisional-ID */
+#define I3C_MSB_PROVISIONAL_ID_POS                     (0) /* The MSB 16-bit value of Provisional-ID */
 
 /* I3C_DEV_CHAR_TABLE8_LOC3 Register */
 
-#define BCR_MASK                                       (0xFF << 8) /* Bus Characteristic Value */
-#define BCR_POS                                        (8) /* Bus Characteristic Value */
-#define DCR_MASK                                       (0xFF << 0) /* Device Characteristic Value */
-#define DCR_POS                                        (0) /* Device Characteristic Value */
+#define I3C_BCR_MASK                                   (0xFF << 8) /* Bus Characteristic Value */
+#define I3C_BCR_POS                                    (8) /* Bus Characteristic Value */
+#define I3C_DCR_MASK                                   (0xFF << 0) /* Device Characteristic Value */
+#define I3C_DCR_POS                                    (0) /* Device Characteristic Value */
 
 /* I3C_DEV_CHAR_TABLE8_LOC4 Register */
 
-#define DEV_DYNAMIC_ADDR_LOC4_MASK                     (0xFF << 0) /* Device Dynamic Address assigned. */
-#define DEV_DYNAMIC_ADDR_LOC4_POS                      (0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_MASK                 (0xFF << 0) /* Device Dynamic Address assigned. */
+#define I3C_DEV_DYNAMIC_ADDR_LOC4_POS                  (0) /* Device Dynamic Address assigned. */
 
 /* I3C_DEV_CHAR_TABLE_POINTER Register */
 
-#define PRESENT_DEV_CHAR_TABLE_INDX_MASK               (0x7 << 19) /* Current index of Device Characteristics Table.  This field returns the current l */
-#define PRESENT_DEV_CHAR_TABLE_INDX_POS                (19) /* Current index of Device Characteristics Table.  This field returns the current l */
-#define DEV_CHAR_TABLE_DEPTH_MASK                      (0x7F << 12) /* Depth of Device Characteristics Table */
-#define DEV_CHAR_TABLE_DEPTH_POS                       (12) /* Depth of Device Characteristics Table */
-#define P_DEV_CHAR_TABLE_START_ADDR_MASK               (0xFFF << 0) /* Start Address of Device Characteristics Table. */
-#define P_DEV_CHAR_TABLE_START_ADDR_POS                (0) /* Start Address of Device Characteristics Table. */
+#define I3C_PRESENT_DEV_CHAR_TABLE_INDX_MASK           (0x7 << 19) /* Current index of Device Characteristics Table.  This field returns the current l */
+#define I3C_PRESENT_DEV_CHAR_TABLE_INDX_POS            (19) /* Current index of Device Characteristics Table.  This field returns the current l */
+#define I3C_DEV_CHAR_TABLE_DEPTH_MASK                  (0x7F << 12) /* Depth of Device Characteristics Table */
+#define I3C_DEV_CHAR_TABLE_DEPTH_POS                   (12) /* Depth of Device Characteristics Table */
+#define I3C_P_DEV_CHAR_TABLE_START_ADDR_MASK           (0xFFF << 0) /* Start Address of Device Characteristics Table. */
+#define I3C_P_DEV_CHAR_TABLE_START_ADDR_POS            (0) /* Start Address of Device Characteristics Table. */
 
 /* I3C_HW_CAPABILITY Register */
 
-#define SLV_IBI_CAP                                    (1U << 19) /* Reflects the IC_SLV_IBI Configurable Parameter.  Specifies slave's capability to */
-#define SLV_HJ_CAP                                     (1U << 18) /* Reflects the IC_SLV_HJ Configurable Parameter.  Specifies slave's capability to  */
-#define DMA_EN                                         (1U << 17) /* Reflects the IC_HAS_DMA Configurable Parameter.  Specifies whether controller is */
-#define HDR_TX_CLOCK_PERIOD_MASK                       (0x3F << 11) /* Reflects the IC_HDR_TX_CLK_PERIOD Configurable Parameter. */
-#define HDR_TX_CLOCK_PERIOD_POS                        (11) /* Reflects the IC_HDR_TX_CLK_PERIOD Configurable Parameter. */
-#define CLOCK_PERIOD_MASK                              (0x3F << 5) /* Reflects the IC_CLK_PERIOD Configurable Parameter */
-#define CLOCK_PERIOD_POS                               (5) /* Reflects the IC_CLK_PERIOD Configurable Parameter */
-#define HDR_TS_EN                                      (1U << 4) /* Reflects the IC_SPEED_HDR_TS Configurable Parameter.  Specifies the Controllers  */
-#define HDR_DDR_EN                                     (1U << 3) /* Reflects the IC_SPEED_HDR_DDR Configurable Parameter.  Specifies the Controllers */
-#define DEVICE_ROLE_CONFIG_MASK                        (0x7 << 0) /* Reflects the IC_DEVICE_ROLE Configurable Parameter.  Specifies the configured ro */
-#define DEVICE_ROLE_CONFIG_POS                         (0) /* Reflects the IC_DEVICE_ROLE Configurable Parameter.  Specifies the configured ro */
+#define I3C_SLV_IBI_CAP                                (1U << 19) /* Reflects the IC_SLV_IBI Configurable Parameter.  Specifies slave's capability to */
+#define I3C_SLV_HJ_CAP                                 (1U << 18) /* Reflects the IC_SLV_HJ Configurable Parameter.  Specifies slave's capability to  */
+#define I3C_DMA_EN                                     (1U << 17) /* Reflects the IC_HAS_DMA Configurable Parameter.  Specifies whether controller is */
+#define I3C_HDR_TX_CLOCK_PERIOD_MASK                   (0x3F << 11) /* Reflects the IC_HDR_TX_CLK_PERIOD Configurable Parameter. */
+#define I3C_HDR_TX_CLOCK_PERIOD_POS                    (11) /* Reflects the IC_HDR_TX_CLK_PERIOD Configurable Parameter. */
+#define I3C_CLOCK_PERIOD_MASK                          (0x3F << 5) /* Reflects the IC_CLK_PERIOD Configurable Parameter */
+#define I3C_CLOCK_PERIOD_POS                           (5) /* Reflects the IC_CLK_PERIOD Configurable Parameter */
+#define I3C_HDR_TS_EN                                  (1U << 4) /* Reflects the IC_SPEED_HDR_TS Configurable Parameter.  Specifies the Controllers  */
+#define I3C_HDR_DDR_EN                                 (1U << 3) /* Reflects the IC_SPEED_HDR_DDR Configurable Parameter.  Specifies the Controllers */
+#define I3C_DEVICE_ROLE_CONFIG_MASK                    (0x7 << 0) /* Reflects the IC_DEVICE_ROLE Configurable Parameter.  Specifies the configured ro */
+#define I3C_DEVICE_ROLE_CONFIG_POS                     (0) /* Reflects the IC_DEVICE_ROLE Configurable Parameter.  Specifies the configured ro */
 
 /* I3C_IBI_QUEUE_CTRL Register */
 
-#define NOTIFY_SIR_REJECTED                            (1U << 3) /* Notify Rejected Slave Interrupt Request Control.  This bit is used to suppress r */
-#define NOTIFY_HJ_REJECTED                             (1U << 0) /* Notify Rejected Hot-Join Control.  This bit is used to suppress reporting to the */
+#define I3C_NOTIFY_SIR_REJECTED                        (1U << 3) /* Notify Rejected Slave Interrupt Request Control.  This bit is used to suppress r */
+#define I3C_NOTIFY_HJ_REJECTED                         (1U << 0) /* Notify Rejected Hot-Join Control.  This bit is used to suppress reporting to the */
 
 /* I3C_IBI_QUEUE_STATUS_DATA Register */
 
-#define IBI_STS_MASK                                   (0xF << 28) /* IBI Received Status.  Defines the master response for IBI received.  4'b0xxx: Re */
-#define IBI_STS_POS                                    (28) /* IBI Received Status.  Defines the master response for IBI received.  4'b0xxx: Re */
-#define IBI_ID_MASK                                    (0xFF << 8) /* IBI Identifier.  The byte received after START which includes the address and th */
-#define IBI_ID_POS                                     (8) /* IBI Identifier.  The byte received after START which includes the address and th */
-#define DATA_LENGTH_MASK                               (0xFF << 0) /* In-Band Interrupt data length.  This field represents the length of data receive */
-#define DATA_LENGTH_POS                                (0) /* In-Band Interrupt data length.  This field represents the length of data receive */
+#define I3C_IBI_STS_MASK                               (0xF << 28) /* IBI Received Status.  Defines the master response for IBI received.  4'b0xxx: Re */
+#define I3C_IBI_STS_POS                                (28) /* IBI Received Status.  Defines the master response for IBI received.  4'b0xxx: Re */
+#define I3C_IBI_ID_MASK                                (0xFF << 8) /* IBI Identifier.  The byte received after START which includes the address and th */
+#define I3C_IBI_ID_POS                                 (8) /* IBI Identifier.  The byte received after START which includes the address and th */
+#define I3C_DATA_LENGTH_MASK                           (0xFF << 0) /* In-Band Interrupt data length.  This field represents the length of data receive */
+#define I3C_DATA_LENGTH_POS                            (0) /* In-Band Interrupt data length.  This field represents the length of data receive */
 
 /* I3C_IBI_SIR_REQ_REJECT Register */
 
-#define SIR_REQ_REJECT_MASK                            (0xFFFFFFFF << 0) /* In-band Slave Interrupt Request Reject.  The application of the DWC_mipi_i3c can */
-#define SIR_REQ_REJECT_POS                             (0) /* In-band Slave Interrupt Request Reject.  The application of the DWC_mipi_i3c can */
+#define I3C_SIR_REQ_REJECT_MASK                        (0xFFFFFFFF << 0) /* In-band Slave Interrupt Request Reject.  The application of the DWC_mipi_i3c can */
+#define I3C_SIR_REQ_REJECT_POS                         (0) /* In-band Slave Interrupt Request Reject.  The application of the DWC_mipi_i3c can */
 
 /* I3C_INTR_FORCE Register */
 
-#define TRANSFER_ERR_FORCE_EN                          (1U << 9) /* Transfer Error Force Enable */
-#define TRANSFER_ABORT_FORCE_EN                        (1U << 5) /* Transfer Abort Force Enable.  This field is used only in master mode of operatio */
-#define RESP_READY_FORCE_EN                            (1U << 4) /* Response Queue Ready Force Enable */
-#define CMD_QUEUE_READY_FORCE_EN                       (1U << 3) /* Command Queue Ready Force Enable */
-#define IBI_THLD_FORCE_EN                              (1U << 2) /* IBI Buffer Threshold Force Enable.  This field is used only in master mode of op */
-#define RX_THLD_FORCE_EN                               (1U << 1) /* Receive Buffer Threshold Force Enable */
-#define TX_THLD_FORCE_EN                               (1U << 0) /* Transmit Buffer Threshold Force Enable. */
+#define I3C_TRANSFER_ERR_FORCE_EN                      (1U << 9) /* Transfer Error Force Enable */
+#define I3C_TRANSFER_ABORT_FORCE_EN                    (1U << 5) /* Transfer Abort Force Enable.  This field is used only in master mode of operatio */
+#define I3C_RESP_READY_FORCE_EN                        (1U << 4) /* Response Queue Ready Force Enable */
+#define I3C_CMD_QUEUE_READY_FORCE_EN                   (1U << 3) /* Command Queue Ready Force Enable */
+#define I3C_IBI_THLD_FORCE_EN                          (1U << 2) /* IBI Buffer Threshold Force Enable.  This field is used only in master mode of op */
+#define I3C_RX_THLD_FORCE_EN                           (1U << 1) /* Receive Buffer Threshold Force Enable */
+#define I3C_TX_THLD_FORCE_EN                           (1U << 0) /* Transmit Buffer Threshold Force Enable. */
 
 /* I3C_INTR_SIGNAL_EN Register */
 
-#define TRANSFER_ERR_SIGNAL_EN                         (1U << 9) /* Transfer Error Signal Enable */
-#define TRANSFER_ABORT_SIGNAL_EN                       (1U << 5) /* Transfer Abort Signal Enable.  This field is used only in master mode of operati */
-#define RESP_READY_SIGNAL_EN                           (1U << 4) /* Response Queue Ready Signal Enable */
-#define CMD_QUEUE_READY_SIGNAL_EN                      (1U << 3) /* Command Queue Ready Signal Enable */
-#define IBI_THLD_SIGNAL_EN                             (1U << 2) /* IBI Buffer Threshold Signal Enable.  This field is used only in master mode of o */
-#define RX_THLD_SIGNAL_EN                              (1U << 1) /* Receive Buffer Threshold Signal Enable */
-#define TX_THLD_SIGNAL_EN                              (1U << 0) /* Transmit Buffer Threshold Signal Enable.  *Note: For the deassertion of the inte */
+#define I3C_TRANSFER_ERR_SIGNAL_EN                     (1U << 9) /* Transfer Error Signal Enable */
+#define I3C_TRANSFER_ABORT_SIGNAL_EN                   (1U << 5) /* Transfer Abort Signal Enable.  This field is used only in master mode of operati */
+#define I3C_RESP_READY_SIGNAL_EN                       (1U << 4) /* Response Queue Ready Signal Enable */
+#define I3C_CMD_QUEUE_READY_SIGNAL_EN                  (1U << 3) /* Command Queue Ready Signal Enable */
+#define I3C_IBI_THLD_SIGNAL_EN                         (1U << 2) /* IBI Buffer Threshold Signal Enable.  This field is used only in master mode of o */
+#define I3C_RX_THLD_SIGNAL_EN                          (1U << 1) /* Receive Buffer Threshold Signal Enable */
+#define I3C_TX_THLD_SIGNAL_EN                          (1U << 0) /* Transmit Buffer Threshold Signal Enable.  *Note: For the deassertion of the inte */
 
 /* I3C_INTR_STATUS_EN Register */
 
-#define TRANSFER_ERR_STS_EN                            (1U << 9) /* Transfer Error Status Enable */
-#define TRANSFER_ABORT_STS_EN                          (1U << 5) /* Transfer Abort Status Enable.  This field is used only in master mode of operati */
-#define RESP_READY_STS_EN                              (1U << 4) /* Response Queue Ready Status Enable */
-#define CMD_QUEUE_READY_STS_EN                         (1U << 3) /* Command Queue Ready Status Enable */
-#define IBI_THLD_STS_EN                                (1U << 2) /* IBI Buffer Threshold Status Enable.  This field is used only in master mode of o */
-#define RX_THLD_STS_EN                                 (1U << 1) /* Receive Buffer Threshold Status Enable */
-#define TX_THLD_STS_EN                                 (1U << 0) /* Transmit Buffer Threshold Status Enable */
+#define I3C_TRANSFER_ERR_STS_EN                        (1U << 9) /* Transfer Error Status Enable */
+#define I3C_TRANSFER_ABORT_STS_EN                      (1U << 5) /* Transfer Abort Status Enable.  This field is used only in master mode of operati */
+#define I3C_RESP_READY_STS_EN                          (1U << 4) /* Response Queue Ready Status Enable */
+#define I3C_CMD_QUEUE_READY_STS_EN                     (1U << 3) /* Command Queue Ready Status Enable */
+#define I3C_IBI_THLD_STS_EN                            (1U << 2) /* IBI Buffer Threshold Status Enable.  This field is used only in master mode of o */
+#define I3C_RX_THLD_STS_EN                             (1U << 1) /* Receive Buffer Threshold Status Enable */
+#define I3C_TX_THLD_STS_EN                             (1U << 0) /* Transmit Buffer Threshold Status Enable */
 
 /* I3C_INTR_STATUS Register */
 
-#define TRANSFER_ERR_STS                               (1U << 9) /* Transfer Error Status.  This interrupt is generated if any error occurs during t */
-#define TRANSFER_ABORT_STS                             (1U << 5) /* Transfer Abort Status.  This field is used only in master mode of operation.  Th */
-#define RESP_READY_STS                                 (1U << 4) /* Response Queue Ready Status.  This interrupt is generated when number of entries */
-#define CMD_QUEUE_READY_STS                            (1U << 3) /* Command Queue Ready.  This interrupt is generated when number of empty locations */
-#define IBI_THLD_STS                                   (1U << 2) /* IBI Buffer Threshold Status.  This field is only used in master mode of operatio */
-#define RX_THLD_STS                                    (1U << 1) /* Receive Buffer Threshold Status.  This interrupt is generated when number of ent */
-#define TX_THLD_STS                                    (1U << 0) /* Transmit Buffer Threshold Status.  This interrupt is generated when number of em */
+#define I3C_TRANSFER_ERR_STS                           (1U << 9) /* Transfer Error Status.  This interrupt is generated if any error occurs during t */
+#define I3C_TRANSFER_ABORT_STS                         (1U << 5) /* Transfer Abort Status.  This field is used only in master mode of operation.  Th */
+#define I3C_RESP_READY_STS                             (1U << 4) /* Response Queue Ready Status.  This interrupt is generated when number of entries */
+#define I3C_CMD_QUEUE_READY_STS                        (1U << 3) /* Command Queue Ready.  This interrupt is generated when number of empty locations */
+#define I3C_IBI_THLD_STS                               (1U << 2) /* IBI Buffer Threshold Status.  This field is only used in master mode of operatio */
+#define I3C_RX_THLD_STS                                (1U << 1) /* Receive Buffer Threshold Status.  This interrupt is generated when number of ent */
+#define I3C_TX_THLD_STS                                (1U << 0) /* Transmit Buffer Threshold Status.  This interrupt is generated when number of em */
 
 /* I3C_PRESENT_STATE Register */
 
-#define MASTER_IDLE                                    (1U << 28) /* This field reflects whether the Master Controller is in Idle state or not. This  */
-#define CMD_TID_MASK                                   (0xF << 24) /* This field reflects the Transaction-ID of the current executing command. */
-#define CMD_TID_POS                                    (24) /* This field reflects the Transaction-ID of the current executing command. */
-#define CM_TFR_ST_STS_MASK                             (0x3F << 16) /* Current Master Transfer State Status.  Indicates the state of current transfer c */
-#define CM_TFR_ST_STS_POS                              (16) /* Current Master Transfer State Status.  Indicates the state of current transfer c */
-#define CM_TFR_STS_MASK                                (0x3F << 8) /* Transfer Type Status.  Indicates the type of transfer currently executing by the */
-#define CM_TFR_STS_POS                                 (8) /* Transfer Type Status.  Indicates the type of transfer currently executing by the */
-#define CURRENT_MASTER                                 (1U << 2) /* This Bit is used to check whether the Master is Current Master or not. The Curre */
-#define SDA_LINE_SIGNAL_LEVEL                          (1U << 1) /* This bit is used to check the SDA line level to recover from errors and for debu */
-#define SCL_LINE_SIGNAL_LEVEL                          (1U << 0) /* This bit is used to check the SCL line level to recover from errors and for debu */
+#define I3C_MASTER_IDLE                                (1U << 28) /* This field reflects whether the Master Controller is in Idle state or not. This  */
+#define I3C_CMD_TID_MASK                               (0xF << 24) /* This field reflects the Transaction-ID of the current executing command. */
+#define I3C_CMD_TID_POS                                (24) /* This field reflects the Transaction-ID of the current executing command. */
+#define I3C_CM_TFR_ST_STS_MASK                         (0x3F << 16) /* Current Master Transfer State Status.  Indicates the state of current transfer c */
+#define I3C_CM_TFR_ST_STS_POS                          (16) /* Current Master Transfer State Status.  Indicates the state of current transfer c */
+#define I3C_CM_TFR_STS_MASK                            (0x3F << 8) /* Transfer Type Status.  Indicates the type of transfer currently executing by the */
+#define I3C_CM_TFR_STS_POS                             (8) /* Transfer Type Status.  Indicates the type of transfer currently executing by the */
+#define I3C_CURRENT_MASTER                             (1U << 2) /* This Bit is used to check whether the Master is Current Master or not. The Curre */
+#define I3C_SDA_LINE_SIGNAL_LEVEL                      (1U << 1) /* This bit is used to check the SDA line level to recover from errors and for debu */
+#define I3C_SCL_LINE_SIGNAL_LEVEL                      (1U << 0) /* This bit is used to check the SCL line level to recover from errors and for debu */
 
 /* I3C_QUEUE_SIZE_CAPABILITY Register */
 
-#define IBI_BUF_SIZE_MASK                              (0xF << 16) /* IBI Queue Size  This field reflects the configured IBI Queue size (in DWORDS) in */
-#define IBI_BUF_SIZE_POS                               (16) /* IBI Queue Size  This field reflects the configured IBI Queue size (in DWORDS) in */
-#define RESP_BUF_SIZE_MASK                             (0xF << 12) /* Response Queue Size  This field reflects the configured Response Queue size (in  */
-#define RESP_BUF_SIZE_POS                              (12) /* Response Queue Size  This field reflects the configured Response Queue size (in  */
-#define CMD_BUF_SIZE_MASK                              (0xF << 8) /* Command Queue Size  This field reflects the configured Command Queue size (in DW */
-#define CMD_BUF_SIZE_POS                               (8) /* Command Queue Size  This field reflects the configured Command Queue size (in DW */
-#define RX_BUF_SIZE_MASK                               (0xF << 4) /* Receive Data Buffer Size  This field reflects the configured Receive Buffer size */
-#define RX_BUF_SIZE_POS                                (4) /* Receive Data Buffer Size  This field reflects the configured Receive Buffer size */
-#define TX_BUF_SIZE_MASK                               (0xF << 0) /* Transmit Data Buffer Size  This field reflects the configured Transmit Buffer si */
-#define TX_BUF_SIZE_POS                                (0) /* Transmit Data Buffer Size  This field reflects the configured Transmit Buffer si */
+#define I3C_IBI_BUF_SIZE_MASK                          (0xF << 16) /* IBI Queue Size  This field reflects the configured IBI Queue size (in DWORDS) in */
+#define I3C_IBI_BUF_SIZE_POS                           (16) /* IBI Queue Size  This field reflects the configured IBI Queue size (in DWORDS) in */
+#define I3C_RESP_BUF_SIZE_MASK                         (0xF << 12) /* Response Queue Size  This field reflects the configured Response Queue size (in  */
+#define I3C_RESP_BUF_SIZE_POS                          (12) /* Response Queue Size  This field reflects the configured Response Queue size (in  */
+#define I3C_CMD_BUF_SIZE_MASK                          (0xF << 8) /* Command Queue Size  This field reflects the configured Command Queue size (in DW */
+#define I3C_CMD_BUF_SIZE_POS                           (8) /* Command Queue Size  This field reflects the configured Command Queue size (in DW */
+#define I3C_RX_BUF_SIZE_MASK                           (0xF << 4) /* Receive Data Buffer Size  This field reflects the configured Receive Buffer size */
+#define I3C_RX_BUF_SIZE_POS                            (4) /* Receive Data Buffer Size  This field reflects the configured Receive Buffer size */
+#define I3C_TX_BUF_SIZE_MASK                           (0xF << 0) /* Transmit Data Buffer Size  This field reflects the configured Transmit Buffer si */
+#define I3C_TX_BUF_SIZE_POS                            (0) /* Transmit Data Buffer Size  This field reflects the configured Transmit Buffer si */
 
 /* I3C_QUEUE_STATUS_LEVEL Register */
 
-#define IBI_STS_CNT_MASK                               (0x1F << 24) /* IBI Buffer Status Count.  Contains the number of IBI status entries in the IBI B */
-#define IBI_STS_CNT_POS                                (24) /* IBI Buffer Status Count.  Contains the number of IBI status entries in the IBI B */
-#define IBI_BUF_BLR_MASK                               (0xFF << 16) /* IBI Buffer Level Value.  Contains the number of valid entries in the IBI Buffer. */
-#define IBI_BUF_BLR_POS                                (16) /* IBI Buffer Level Value.  Contains the number of valid entries in the IBI Buffer. */
-#define RESP_BUF_BLR_MASK                              (0xFF << 8) /* Response Buffer Level Value.  Contains the number of valid data entries in the r */
-#define RESP_BUF_BLR_POS                               (8) /* Response Buffer Level Value.  Contains the number of valid data entries in the r */
-#define CMD_QUEUE_EMPTY_LOC_MASK                       (0xFF << 0) /* Command Queue Empty Locations.  Contains the number of empty locations in the co */
-#define CMD_QUEUE_EMPTY_LOC_POS                        (0) /* Command Queue Empty Locations.  Contains the number of empty locations in the co */
+#define I3C_IBI_STS_CNT_MASK                           (0x1F << 24) /* IBI Buffer Status Count.  Contains the number of IBI status entries in the IBI B */
+#define I3C_IBI_STS_CNT_POS                            (24) /* IBI Buffer Status Count.  Contains the number of IBI status entries in the IBI B */
+#define I3C_IBI_BUF_BLR_MASK                           (0xFF << 16) /* IBI Buffer Level Value.  Contains the number of valid entries in the IBI Buffer. */
+#define I3C_IBI_BUF_BLR_POS                            (16) /* IBI Buffer Level Value.  Contains the number of valid entries in the IBI Buffer. */
+#define I3C_RESP_BUF_BLR_MASK                          (0xFF << 8) /* Response Buffer Level Value.  Contains the number of valid data entries in the r */
+#define I3C_RESP_BUF_BLR_POS                           (8) /* Response Buffer Level Value.  Contains the number of valid data entries in the r */
+#define I3C_CMD_QUEUE_EMPTY_LOC_MASK                   (0xFF << 0) /* Command Queue Empty Locations.  Contains the number of empty locations in the co */
+#define I3C_CMD_QUEUE_EMPTY_LOC_POS                    (0) /* Command Queue Empty Locations.  Contains the number of empty locations in the co */
 
 /* I3C_QUEUE_THLD_CTRL Register */
 
-#define IBI_STATUS_THLD_MASK                           (0xFF << 24) /* In-Band Interrupt Status Threshold Value.  Every In Band Interrupt received (wit */
-#define IBI_STATUS_THLD_POS                            (24) /* In-Band Interrupt Status Threshold Value.  Every In Band Interrupt received (wit */
-#define RESP_BUF_THLD_MASK                             (0xFF << 8) /* Response Buffer Threshold Value.  Controls the number of entries (or greater) in */
-#define RESP_BUF_THLD_POS                              (8) /* Response Buffer Threshold Value.  Controls the number of entries (or greater) in */
-#define CMD_EMPTY_BUF_THLD_MASK                        (0xFF << 0) /* Command Buffer Empty Threshold Value. Controls the number of empty locations (or */
-#define CMD_EMPTY_BUF_THLD_POS                         (0) /* Command Buffer Empty Threshold Value. Controls the number of empty locations (or */
+#define I3C_IBI_STATUS_THLD_MASK                       (0xFF << 24) /* In-Band Interrupt Status Threshold Value.  Every In Band Interrupt received (wit */
+#define I3C_IBI_STATUS_THLD_POS                        (24) /* In-Band Interrupt Status Threshold Value.  Every In Band Interrupt received (wit */
+#define I3C_RESP_BUF_THLD_MASK                         (0xFF << 8) /* Response Buffer Threshold Value.  Controls the number of entries (or greater) in */
+#define I3C_RESP_BUF_THLD_POS                          (8) /* Response Buffer Threshold Value.  Controls the number of entries (or greater) in */
+#define I3C_CMD_EMPTY_BUF_THLD_MASK                    (0xFF << 0) /* Command Buffer Empty Threshold Value. Controls the number of empty locations (or */
+#define I3C_CMD_EMPTY_BUF_THLD_POS                     (0) /* Command Buffer Empty Threshold Value. Controls the number of empty locations (or */
 
 /* I3C_RESET_CTRL Register */
 
-#define IBI_QUEUE_RST                                  (1U << 5) /* IBI Queue Software Reset.  This bit is only used in master mode of operation.  W */
-#define RX_FIFO_RST                                    (1U << 4) /* Receive Buffer Software Reset.  Write 1'b1 to this bit to exercise Receive Buffe */
-#define TX_FIFO_RST                                    (1U << 3) /* Transmit Buffer Software Reset.  Write 1'b1 to this bit to exercise Transmit Buf */
-#define RESP_QUEUE_RST                                 (1U << 2) /* Response Queue Software Reset.  Write 1'b1 to this bit to exercise Response Queu */
-#define CMD_QUEUE_RST                                  (1U << 1) /* Command Queue Software Reset.  Write 1'b1 to this bit to exercise Command Queue  */
-#define SOFT_RST                                       (1U << 0) /* Core Software Reset.  Write 1'b1 to this bit to exercise software reset. This wi */
+#define I3C_IBI_QUEUE_RST                              (1U << 5) /* IBI Queue Software Reset.  This bit is only used in master mode of operation.  W */
+#define I3C_RX_FIFO_RST                                (1U << 4) /* Receive Buffer Software Reset.  Write 1'b1 to this bit to exercise Receive Buffe */
+#define I3C_TX_FIFO_RST                                (1U << 3) /* Transmit Buffer Software Reset.  Write 1'b1 to this bit to exercise Transmit Buf */
+#define I3C_RESP_QUEUE_RST                             (1U << 2) /* Response Queue Software Reset.  Write 1'b1 to this bit to exercise Response Queu */
+#define I3C_CMD_QUEUE_RST                              (1U << 1) /* Command Queue Software Reset.  Write 1'b1 to this bit to exercise Command Queue  */
+#define I3C_SOFT_RST                                   (1U << 0) /* Core Software Reset.  Write 1'b1 to this bit to exercise software reset. This wi */
 
 /* I3C_RESPONSE_QUEUE_PORT Register */
 
-#define RESPONSE_MASK                                  (0xFFFFFFFF << 0) /* 32 bit Response */
-#define RESPONSE_POS                                   (0) /* 32 bit Response */
+#define I3C_RESPONSE_MASK                              (0xFFFFFFFF << 0) /* 32 bit Response */
+#define I3C_RESPONSE_POS                               (0) /* 32 bit Response */
 
 /* I3C_RX_TX_DATA_PORT Register */
 
-#define RX_TX_DATA_PORT_MASK                           (0xFFFFFFFF << 0) /* Receive and Transmit Data Port. (Merged in Doxbox)  The Receive data port is map */
-#define RX_TX_DATA_PORT_POS                            (0) /* Receive and Transmit Data Port. (Merged in Doxbox)  The Receive data port is map */
+#define I3C_RX_TX_DATA_PORT_MASK                       (0xFFFFFFFF << 0) /* Receive and Transmit Data Port. (Merged in Doxbox)  The Receive data port is map */
+#define I3C_RX_TX_DATA_PORT_POS                        (0) /* Receive and Transmit Data Port. (Merged in Doxbox)  The Receive data port is map */
 
 /* I3C_SCL_EXT_LCNT_TIMING Register */
 
-#define I3C_EXT_LCNT_4_MASK                            (0xFF << 24) /* I3C Extended Low Count Register 4  SDR4 uses this register field for data transf */
-#define I3C_EXT_LCNT_4_POS                             (24) /* I3C Extended Low Count Register 4  SDR4 uses this register field for data transf */
-#define I3C_EXT_LCNT_3_MASK                            (0xFF << 16) /* I3C Extended Low Count Register 3  SDR3 uses this register field for data transf */
-#define I3C_EXT_LCNT_3_POS                             (16) /* I3C Extended Low Count Register 3  SDR3 uses this register field for data transf */
-#define I3C_EXT_LCNT_2_MASK                            (0xFF << 8) /* I3C Extended Low Count Register 2  SDR2 uses this register field for data transf */
-#define I3C_EXT_LCNT_2_POS                             (8) /* I3C Extended Low Count Register 2  SDR2 uses this register field for data transf */
-#define I3C_EXT_LCNT_1_MASK                            (0xFF << 0) /* I3C Extended Low Count Register 1  SDR1 uses this register field for data transf */
-#define I3C_EXT_LCNT_1_POS                             (0) /* I3C Extended Low Count Register 1  SDR1 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_4_MASK                        (0xFF << 24) /* I3C Extended Low Count Register 4  SDR4 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_4_POS                         (24) /* I3C Extended Low Count Register 4  SDR4 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_3_MASK                        (0xFF << 16) /* I3C Extended Low Count Register 3  SDR3 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_3_POS                         (16) /* I3C Extended Low Count Register 3  SDR3 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_2_MASK                        (0xFF << 8) /* I3C Extended Low Count Register 2  SDR2 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_2_POS                         (8) /* I3C Extended Low Count Register 2  SDR2 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_1_MASK                        (0xFF << 0) /* I3C Extended Low Count Register 1  SDR1 uses this register field for data transf */
+#define I3C_I3C_EXT_LCNT_1_POS                         (0) /* I3C Extended Low Count Register 1  SDR1 uses this register field for data transf */
 
 /* I3C_SCL_EXT_TERMN_LCNT_TIME Register */
 
-#define I3C_EXT_TERMN_LCNT_MASK                        (0xF << 0) /* I3C Read Termination Bit Low count.  Extended I3C Read Termination Bit low count */
-#define I3C_EXT_TERMN_LCNT_POS                         (0) /* I3C Read Termination Bit Low count.  Extended I3C Read Termination Bit low count */
+#define I3C_I3C_EXT_TERMN_LCNT_MASK                    (0xF << 0) /* I3C Read Termination Bit Low count.  Extended I3C Read Termination Bit low count */
+#define I3C_I3C_EXT_TERMN_LCNT_POS                     (0) /* I3C Read Termination Bit Low count.  Extended I3C Read Termination Bit low count */
 
 /* I3C_SCL_I2C_FMP_TIMING Register */
 
-#define I2C_FMP_HCNT_MASK                              (0xFF << 16) /* I2C Fast Mode Plus High Count  The SCL open-drain high count timing for I2C fast */
-#define I2C_FMP_HCNT_POS                               (16) /* I2C Fast Mode Plus High Count  The SCL open-drain high count timing for I2C fast */
-#define I2C_FMP_LCNT_MASK                              (0xFFFF << 0) /* I2C Fast Mode Plus Low Count  The SCL open-drain low count timing for I2C fast m */
-#define I2C_FMP_LCNT_POS                               (0) /* I2C Fast Mode Plus Low Count  The SCL open-drain low count timing for I2C fast m */
+#define I3C_I2C_FMP_HCNT_MASK                          (0xFF << 16) /* I2C Fast Mode Plus High Count  The SCL open-drain high count timing for I2C fast */
+#define I3C_I2C_FMP_HCNT_POS                           (16) /* I2C Fast Mode Plus High Count  The SCL open-drain high count timing for I2C fast */
+#define I3C_I2C_FMP_LCNT_MASK                          (0xFFFF << 0) /* I2C Fast Mode Plus Low Count  The SCL open-drain low count timing for I2C fast m */
+#define I3C_I2C_FMP_LCNT_POS                           (0) /* I2C Fast Mode Plus Low Count  The SCL open-drain low count timing for I2C fast m */
 
 /* I3C_SCL_I2C_FM_TIMING Register */
 
-#define I2C_FM_HCNT_MASK                               (0xFFFF << 16) /* I2C Fast Mode High Count  The SCL open-drain high count timing for I2C fast mode */
-#define I2C_FM_HCNT_POS                                (16) /* I2C Fast Mode High Count  The SCL open-drain high count timing for I2C fast mode */
-#define I2C_FM_LCNT_MASK                               (0xFFFF << 0) /* I2C Fast Mode Low Count  The SCL open-drain low count timing for I2C fast mode t */
-#define I2C_FM_LCNT_POS                                (0) /* I2C Fast Mode Low Count  The SCL open-drain low count timing for I2C fast mode t */
+#define I3C_I2C_FM_HCNT_MASK                           (0xFFFF << 16) /* I2C Fast Mode High Count  The SCL open-drain high count timing for I2C fast mode */
+#define I3C_I2C_FM_HCNT_POS                            (16) /* I2C Fast Mode High Count  The SCL open-drain high count timing for I2C fast mode */
+#define I3C_I2C_FM_LCNT_MASK                           (0xFFFF << 0) /* I2C Fast Mode Low Count  The SCL open-drain low count timing for I2C fast mode t */
+#define I3C_I2C_FM_LCNT_POS                            (0) /* I2C Fast Mode Low Count  The SCL open-drain low count timing for I2C fast mode t */
 
 /* I3C_SCL_I3C_OD_TIMING Register */
 
-#define I3C_OD_HCNT_MASK                               (0xFF << 16) /* I3C Open Drain High Count.  SCL open-drain High count (I3C) for I3C transfers ta */
-#define I3C_OD_HCNT_POS                                (16) /* I3C Open Drain High Count.  SCL open-drain High count (I3C) for I3C transfers ta */
-#define I3C_OD_LCNT_MASK                               (0xFF << 0) /* I3C Open Drain Low Count.  SCL Open-drain low count for I3C transfers targeted t */
-#define I3C_OD_LCNT_POS                                (0) /* I3C Open Drain Low Count.  SCL Open-drain low count for I3C transfers targeted t */
+#define I3C_I3C_OD_HCNT_MASK                           (0xFF << 16) /* I3C Open Drain High Count.  SCL open-drain High count (I3C) for I3C transfers ta */
+#define I3C_I3C_OD_HCNT_POS                            (16) /* I3C Open Drain High Count.  SCL open-drain High count (I3C) for I3C transfers ta */
+#define I3C_I3C_OD_LCNT_MASK                           (0xFF << 0) /* I3C Open Drain Low Count.  SCL Open-drain low count for I3C transfers targeted t */
+#define I3C_I3C_OD_LCNT_POS                            (0) /* I3C Open Drain Low Count.  SCL Open-drain low count for I3C transfers targeted t */
 
 /* I3C_SCL_I3C_PP_TIMING Register */
 
-#define I3C_PP_HCNT_MASK                               (0xFF << 16) /* I3C Push Pull High Count.  SCL push-pull High count for I3C transfers targeted t */
-#define I3C_PP_HCNT_POS                                (16) /* I3C Push Pull High Count.  SCL push-pull High count for I3C transfers targeted t */
-#define I3C_PP_LCNT_MASK                               (0xFF << 0) /* I3C Push Pull Low Count.  SCL Push-pull low count for I3C transfers targeted to  */
-#define I3C_PP_LCNT_POS                                (0) /* I3C Push Pull Low Count.  SCL Push-pull low count for I3C transfers targeted to  */
+#define I3C_I3C_PP_HCNT_MASK                           (0xFF << 16) /* I3C Push Pull High Count.  SCL push-pull High count for I3C transfers targeted t */
+#define I3C_I3C_PP_HCNT_POS                            (16) /* I3C Push Pull High Count.  SCL push-pull High count for I3C transfers targeted t */
+#define I3C_I3C_PP_LCNT_MASK                           (0xFF << 0) /* I3C Push Pull Low Count.  SCL Push-pull low count for I3C transfers targeted to  */
+#define I3C_I3C_PP_LCNT_POS                            (0) /* I3C Push Pull Low Count.  SCL Push-pull low count for I3C transfers targeted to  */
 
 /* I3C_SDA_HOLD_DLY_TIMING Register */
 
-#define SDA_TX_HOLD_MASK                               (0x7 << 16) /* This field controls the hold time (in term of the core clock period) of the tran */
-#define SDA_TX_HOLD_POS                                (16) /* This field controls the hold time (in term of the core clock period) of the tran */
+#define I3C_SDA_TX_HOLD_MASK                           (0x7 << 16) /* This field controls the hold time (in term of the core clock period) of the tran */
+#define I3C_SDA_TX_HOLD_POS                            (16) /* This field controls the hold time (in term of the core clock period) of the tran */
 
 /* I3C_SLV_EVENT_STATUS Register */
 
-#define MWL_UPDATED                                    (1U << 7) /* MWL Updated Status.  This bit indicates a SETMWL CCC is received by the slave. T */
-#define MRL_UPDATED                                    (1U << 6) /* MRL Updated Status.  This bit indicates a SETMRL CCC is received by the slave. T */
-#define ACTIVITY_STATE_MASK                            (0x3 << 4) /* Activity State Status.  ENTAS0 - 00  ENTAS1 - 01  ENTAS2 - 10  ENTAS3 - 11  This */
-#define ACTIVITY_STATE_POS                             (4) /* Activity State Status.  ENTAS0 - 00  ENTAS1 - 01  ENTAS2 - 10  ENTAS3 - 11  This */
+#define I3C_MWL_UPDATED                                (1U << 7) /* MWL Updated Status.  This bit indicates a SETMWL CCC is received by the slave. T */
+#define I3C_MRL_UPDATED                                (1U << 6) /* MRL Updated Status.  This bit indicates a SETMRL CCC is received by the slave. T */
+#define I3C_ACTIVITY_STATE_MASK                        (0x3 << 4) /* Activity State Status.  ENTAS0 - 00  ENTAS1 - 01  ENTAS2 - 10  ENTAS3 - 11  This */
+#define I3C_ACTIVITY_STATE_POS                         (4) /* Activity State Status.  ENTAS0 - 00  ENTAS1 - 01  ENTAS2 - 10  ENTAS3 - 11  This */
 
 /* I3C_VENDOR_SPECIFIC_PTR Register */
 
-#define P_VENDOR_REG_START_ADDR_MASK                   (0xFFFF << 0) /* Start Address of Vendor specific registers. */
-#define P_VENDOR_REG_START_ADDR_POS                    (0) /* Start Address of Vendor specific registers. */
+#define I3C_P_VENDOR_REG_START_ADDR_MASK               (0xFFFF << 0) /* Start Address of Vendor specific registers. */
+#define I3C_P_VENDOR_REG_START_ADDR_POS                (0) /* Start Address of Vendor specific registers. */
 
 /* I3C_VER_ID Register */
 
-#define I3C_VER_ID_MASK                                (0xFFFFFFFF << 0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
-#define I3C_VER_ID_POS                                 (0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
+#define I3C_I3C_VER_ID_MASK                            (0xFFFFFFFF << 0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
+#define I3C_I3C_VER_ID_POS                             (0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
 
 /* I3C_VER_TYPE Register */
 
-#define I3C_VER_TYPE_MASK                              (0xFFFFFFFF << 0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
-#define I3C_VER_TYPE_POS                               (0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
+#define I3C_I3C_VER_TYPE_MASK                          (0xFFFFFFFF << 0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
+#define I3C_I3C_VER_TYPE_POS                           (0) /* Current release type  This field indicates the Synopsys DesignWare Cores DWC_mip */
 
 #endif /* __DA1470_I3C_H */

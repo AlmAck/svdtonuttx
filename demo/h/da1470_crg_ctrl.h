@@ -47,15 +47,15 @@
 
 /* CLK_PDCTRL Register */
 
-#define EMMC_INV_TX_CLK                       (1U << 13) /* Inverts the clock in the TX path */
-#define EMMC_INV_RX_CLK                       (1U << 12) /* Invert the clock in the RX path, cascaded with INV_TX_CLK */
-#define EMMC_ENABLE                           (1U << 11) /* Enables the clock. */
-#define EMMC_CLK_DIV_MASK                     (0xF << 7) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
-#define EMMC_CLK_DIV_POS                      (7) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
-#define SDIO_INV_TX_CLK                       (1U << 6) /* Inverts the clock in the TX path */
-#define SDIO_INV_RX_CLK                       (1U << 5) /* Invert the clock in the RX path, cascaded with INV_TX_CLK */
-#define SDIO_ENABLE                           (1U << 4) /* Enables the clock. */
-#define SDIO_CLK_DIV_MASK                     (0xF << 0) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
-#define SDIO_CLK_DIV_POS                      (0) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
+#define CRG_CTRL_EMMC_INV_TX_CLK              (1U << 13) /* Inverts the clock in the TX path */
+#define CRG_CTRL_EMMC_INV_RX_CLK              (1U << 12) /* Invert the clock in the RX path, cascaded with INV_TX_CLK */
+#define CRG_CTRL_EMMC_ENABLE                  (1U << 11) /* Enables the clock. */
+#define CRG_CTRL_EMMC_CLK_DIV_MASK            (0xF << 7) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
+#define CRG_CTRL_EMMC_CLK_DIV_POS             (7) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
+#define CRG_CTRL_SDIO_INV_TX_CLK              (1U << 6) /* Inverts the clock in the TX path */
+#define CRG_CTRL_SDIO_INV_RX_CLK              (1U << 5) /* Invert the clock in the RX path, cascaded with INV_TX_CLK */
+#define CRG_CTRL_SDIO_ENABLE                  (1U << 4) /* Enables the clock. */
+#define CRG_CTRL_SDIO_CLK_DIV_MASK            (0xF << 0) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
+#define CRG_CTRL_SDIO_CLK_DIV_POS             (0) /* clock divider setting 0x0 : divide by 16 0x1 : divide by 1 0x2 : divide by 2 0x4 */
 
 #endif /* __DA1470_CRG_CTRL_H */
