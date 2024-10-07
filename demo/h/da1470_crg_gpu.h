@@ -21,6 +21,17 @@
 #ifndef __DA1470_CRG_GPU_H
 #define __DA1470_CRG_GPU_H
 
+/****************************************************************************
+ * Included Files
+ ****************************************************************************/
+
+#include <nuttx/config.h>
+#include "da1470_memorymap.h"
+
+/****************************************************************************
+ * Pre-processor Definitions
+ ****************************************************************************/
+
 /* Register offsets *********************************************************/
 
 #define DA1470_CRG_GPU_CLK_GPU_OFFSET         0x0004 /* Control register for clocks in PD_GPU */
@@ -33,9 +44,12 @@
 
 /* Register bit definitions *************************************************/
 
-#define CRG_GPU_CLK_GPU_MIPI_D_PHY_EN         (1U << 3) /* No description available. */
-#define CRG_GPU_CLK_GPU_MIPI_PHY_EN           (1U << 2) /* No description available. */
-#define CRG_GPU_CLK_GPU_MIPI_DSI_EN           (1U << 1) /* No description available. */
-#define CRG_GPU_CLK_GPU_GPU_ENABLE            (1U << 0) /* No description available. */
+
+/* CLK_GPU Register */
+
+#define MIPI_D_PHY_EN                         (1U << 3) /* No description available. */
+#define MIPI_PHY_EN                           (1U << 2) /* No description available. */
+#define MIPI_DSI_EN                           (1U << 1) /* No description available. */
+#define GPU_ENABLE                            (1U << 0) /* No description available. */
 
 #endif /* __DA1470_CRG_GPU_H */

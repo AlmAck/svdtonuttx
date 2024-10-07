@@ -242,15 +242,16 @@ def svd_to_header(svd_path, output_dir, custom_prefix):
             # Section for register bit definitions
             file.write("/* Register bit definitions *************************************************/\n\n")
             for register in peripheral.registers:
+                file.write(f"\n/* {register.name.replace('_REG', '')} Register */\n\n")
                 for field in register.fields:
-                    field_name = f"{register.name.replace('_REG', '')}_{field.name}"
+                    field_name = f"{field.name}"
                     field_comment = format_comment(field.description)
                     if field.bit_width == 1:
-                        file.write(f"#define {peripheral.name.upper()}_{field_name} (1U << {field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {field_name} (1U << {field.bit_offset}) /* {field_comment} */\n")
                     else:
                         mask = (1 << field.bit_width) - 1
-                        file.write(f"#define {peripheral.name.upper()}_{field_name}_MASK (0x{mask:X} << {field.bit_offset}) /* {field_comment} */\n")
-                        file.write(f"#define {peripheral.name.upper()}_{field_name}_POS ({field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {field_name}_MASK (0x{mask:X} << {field.bit_offset}) /* {field_comment} */\n")
+                        file.write(f"#define {field_name}_POS ({field.bit_offset}) /* {field_comment} */\n")
 
             file.write(f"\n#endif /* __{custom_prefix.upper()}_{peripheral.name.upper()}_H */\n")
 

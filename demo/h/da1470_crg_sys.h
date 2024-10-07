@@ -21,49 +21,72 @@
 #ifndef __DA1470_CRG_SYS_H
 #define __DA1470_CRG_SYS_H
 
+/****************************************************************************
+ * Included Files
+ ****************************************************************************/
+
+#include <nuttx/config.h>
+#include "da1470_memorymap.h"
+
+/****************************************************************************
+ * Pre-processor Definitions
+ ****************************************************************************/
+
 /* Register offsets *********************************************************/
 
-#define DA1470_CRG_SYS_BATCHECK_OFFSET         0x0010 /* No description available. */
-#define DA1470_CRG_SYS_CLK_SYS_OFFSET          0x0000 /* Peripheral divider register */
-#define DA1470_CRG_SYS_RESET_CLK_SYS_OFFSET    0x000C /* Peripheral divider RESET register */
-#define DA1470_CRG_SYS_SET_CLK_SYS_OFFSET      0x0008 /* Peripheral divider SET register */
+#define DA1470_CRG_SYS_BATCHECK_OFFSET        0x0010 /* No description available. */
+#define DA1470_CRG_SYS_CLK_SYS_OFFSET         0x0000 /* Peripheral divider register */
+#define DA1470_CRG_SYS_RESET_CLK_SYS_OFFSET   0x000C /* Peripheral divider RESET register */
+#define DA1470_CRG_SYS_SET_CLK_SYS_OFFSET     0x0008 /* Peripheral divider SET register */
 
 /* Register addresses *******************************************************/
 
-#define DA1470_CRG_SYS_BASE                    0x50040400 /* CRG_SYS registers */
+#define DA1470_CRG_SYS_BASE                   0x50040400 /* CRG_SYS registers */
 
-#define DA1470_CRG_SYS_BATCHECK                (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_BATCHECK_OFFSET) /* No description available. */
-#define DA1470_CRG_SYS_CLK_SYS                 (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_CLK_SYS_OFFSET) /* Peripheral divider register */
-#define DA1470_CRG_SYS_RESET_CLK_SYS           (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_RESET_CLK_SYS_OFFSET) /* Peripheral divider RESET register */
-#define DA1470_CRG_SYS_SET_CLK_SYS             (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_SET_CLK_SYS_OFFSET) /* Peripheral divider SET register */
+#define DA1470_CRG_SYS_BATCHECK               (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_BATCHECK_OFFSET) /* No description available. */
+#define DA1470_CRG_SYS_CLK_SYS                (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_CLK_SYS_OFFSET) /* Peripheral divider register */
+#define DA1470_CRG_SYS_RESET_CLK_SYS          (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_RESET_CLK_SYS_OFFSET) /* Peripheral divider RESET register */
+#define DA1470_CRG_SYS_SET_CLK_SYS            (DA1470_CRG_SYS_BASE + DA1470_CRG_SYS_SET_CLK_SYS_OFFSET) /* Peripheral divider SET register */
 
 /* Register bit definitions *************************************************/
 
-#define CRG_SYS_BATCHECK_BATCHECK_LOAD_ENABLE  (1U << 7) /* Enable a current load on the battery. */
-#define CRG_SYS_BATCHECK_BATCHECK_ILOAD_MASK   (0x7 << 4) /* Set the current load to (ILOAD+1) mA. */
-#define CRG_SYS_BATCHECK_BATCHECK_ILOAD_POS    (4) /* Set the current load to (ILOAD+1) mA. */
-#define CRG_SYS_BATCHECK_BATCHECK_TRIM_MASK    (0xF << 0) /* Trim the current load with steps of 2.7% from -19.1% to +19.1%. 0: +0.0% , 8: -0 */
-#define CRG_SYS_BATCHECK_BATCHECK_TRIM_POS     (0) /* Trim the current load with steps of 2.7% from -19.1% to +19.1%. 0: +0.0% , 8: -0 */
-#define CRG_SYS_CLK_SYS_SPI3_CLK_SEL           (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_CLK_SYS_SPI3_ENABLE            (1U << 6) /* Enables the clock */
-#define CRG_SYS_CLK_SYS_CLK_CHG_EN             (1U << 5) /* Enables the clocks for the charger FSM block */
-#define CRG_SYS_CLK_SYS_LCD_RESET_REQ          (1U << 4) /* Generates a SW reset towards the LCD controller. */
-#define CRG_SYS_CLK_SYS_LCD_DPHYCLK_SEL        (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
-#define CRG_SYS_CLK_SYS_LCD_CLK_SEL            (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_CLK_SYS_LCD_ENABLE             (1U << 0) /* Enables the clock */
-#define CRG_SYS_RESET_CLK_SYS_SPI3_CLK_SEL     (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_RESET_CLK_SYS_SPI3_ENABLE      (1U << 6) /* Enables the clock */
-#define CRG_SYS_RESET_CLK_SYS_CLK_CHG_EN       (1U << 5) /* Enables the clocks for the charger FSM block */
-#define CRG_SYS_RESET_CLK_SYS_LCD_RESET_REQ    (1U << 4) /* Generates a SW reset towards the LCD controller. */
-#define CRG_SYS_RESET_CLK_SYS_LCD_DPHYCLK_SEL  (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
-#define CRG_SYS_RESET_CLK_SYS_LCD_CLK_SEL      (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_RESET_CLK_SYS_LCD_ENABLE       (1U << 0) /* Enables the clock */
-#define CRG_SYS_SET_CLK_SYS_SPI3_CLK_SEL       (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_SET_CLK_SYS_SPI3_ENABLE        (1U << 6) /* Enables the clock */
-#define CRG_SYS_SET_CLK_SYS_CLK_CHG_EN         (1U << 5) /* Enables the clocks for the charger FSM block */
-#define CRG_SYS_SET_CLK_SYS_LCD_RESET_REQ      (1U << 4) /* Generates a SW reset towards the LCD controller. */
-#define CRG_SYS_SET_CLK_SYS_LCD_DPHYCLK_SEL    (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
-#define CRG_SYS_SET_CLK_SYS_LCD_CLK_SEL        (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_SYS_SET_CLK_SYS_LCD_ENABLE         (1U << 0) /* Enables the clock */
+
+/* BATCHECK Register */
+
+#define BATCHECK_LOAD_ENABLE                  (1U << 7) /* Enable a current load on the battery. */
+#define BATCHECK_ILOAD_MASK                   (0x7 << 4) /* Set the current load to (ILOAD+1) mA. */
+#define BATCHECK_ILOAD_POS                    (4) /* Set the current load to (ILOAD+1) mA. */
+#define BATCHECK_TRIM_MASK                    (0xF << 0) /* Trim the current load with steps of 2.7% from -19.1% to +19.1%. 0: +0.0% , 8: -0 */
+#define BATCHECK_TRIM_POS                     (0) /* Trim the current load with steps of 2.7% from -19.1% to +19.1%. 0: +0.0% , 8: -0 */
+
+/* CLK_SYS Register */
+
+#define SPI3_CLK_SEL                          (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define SPI3_ENABLE                           (1U << 6) /* Enables the clock */
+#define CLK_CHG_EN                            (1U << 5) /* Enables the clocks for the charger FSM block */
+#define LCD_RESET_REQ                         (1U << 4) /* Generates a SW reset towards the LCD controller. */
+#define LCD_DPHYCLK_SEL                       (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
+#define LCD_CLK_SEL                           (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define LCD_ENABLE                            (1U << 0) /* Enables the clock */
+
+/* RESET_CLK_SYS Register */
+
+#define SPI3_CLK_SEL                          (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define SPI3_ENABLE                           (1U << 6) /* Enables the clock */
+#define CLK_CHG_EN                            (1U << 5) /* Enables the clocks for the charger FSM block */
+#define LCD_RESET_REQ                         (1U << 4) /* Generates a SW reset towards the LCD controller. */
+#define LCD_DPHYCLK_SEL                       (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
+#define LCD_CLK_SEL                           (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define LCD_ENABLE                            (1U << 0) /* Enables the clock */
+
+/* SET_CLK_SYS Register */
+
+#define SPI3_CLK_SEL                          (1U << 7) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define SPI3_ENABLE                           (1U << 6) /* Enables the clock */
+#define CLK_CHG_EN                            (1U << 5) /* Enables the clocks for the charger FSM block */
+#define LCD_RESET_REQ                         (1U << 4) /* Generates a SW reset towards the LCD controller. */
+#define LCD_DPHYCLK_SEL                       (1U << 3) /* This bitfield selects the clock source for the LCD controller. This bit may not  */
+#define LCD_CLK_SEL                           (1U << 1) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define LCD_ENABLE                            (1U << 0) /* Enables the clock */
 
 #endif /* __DA1470_CRG_SYS_H */

@@ -21,6 +21,17 @@
 #ifndef __DA1470_CRG_AUD_H
 #define __DA1470_CRG_AUD_H
 
+/****************************************************************************
+ * Included Files
+ ****************************************************************************/
+
+#include <nuttx/config.h>
+#include "da1470_memorymap.h"
+
+/****************************************************************************
+ * Pre-processor Definitions
+ ****************************************************************************/
+
 /* Register offsets *********************************************************/
 
 #define DA1470_CRG_AUD_PCM_DIV_OFFSET         0x0040 /* PCM divider and enables */
@@ -39,21 +50,33 @@
 
 /* Register bit definitions *************************************************/
 
-#define CRG_AUD_PCM_DIV_PCM_SRC_SEL           (1U << 13) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
-#define CRG_AUD_PCM_DIV_CLK_PCM_EN            (1U << 12) /* Enable for the internally generated PCM clock The PCM_DIV must be set before or  */
-#define CRG_AUD_PCM_DIV_PCM_DIV_MASK          (0xFFF << 0) /* PCM clock divider. Minimum value is 0x2. */
-#define CRG_AUD_PCM_DIV_PCM_DIV_POS           (0) /* PCM clock divider. Minimum value is 0x2. */
-#define CRG_AUD_PCM_FDIV_PCM_FDIV_MASK        (0xFFFF << 0) /* These bits define the fractional division part of the PCM clock. The left most ' */
-#define CRG_AUD_PCM_FDIV_PCM_FDIV_POS         (0) /* These bits define the fractional division part of the PCM clock. The left most ' */
-#define CRG_AUD_PDM_DIV_PDM_MASTER_MODE       (1U << 9) /* Master mode selection 0: slave mode 1: master mode */
-#define CRG_AUD_PDM_DIV_CLK_PDM_EN            (1U << 8) /* Enable for the internally generated PDM clock The PDM_DIV must be set before or  */
-#define CRG_AUD_PDM_DIV_PDM_DIV_MASK          (0xFF << 0) /* PDM clock divider */
-#define CRG_AUD_PDM_DIV_PDM_DIV_POS           (0) /* PDM clock divider */
-#define CRG_AUD_SRC_DIV_CLK_SRC2_EN           (1U << 17) /* Enable for the internally generated SRC2 clock The SRC2_DIV must be set before o */
-#define CRG_AUD_SRC_DIV_CLK_SRC_EN            (1U << 16) /* Enable for the internally generated SRC clock The SRC_DIV must be set before or  */
-#define CRG_AUD_SRC_DIV_SRC2_DIV_MASK         (0xFF << 8) /* SRC2 clock divider */
-#define CRG_AUD_SRC_DIV_SRC2_DIV_POS          (8) /* SRC2 clock divider */
-#define CRG_AUD_SRC_DIV_SRC_DIV_MASK          (0xFF << 0) /* SRC clock divider */
-#define CRG_AUD_SRC_DIV_SRC_DIV_POS           (0) /* SRC clock divider */
+
+/* PCM_DIV Register */
+
+#define PCM_SRC_SEL                           (1U << 13) /* Selects the clock source 1 = DIV1 clock 0 = DIVN clock */
+#define CLK_PCM_EN                            (1U << 12) /* Enable for the internally generated PCM clock The PCM_DIV must be set before or  */
+#define PCM_DIV_MASK                          (0xFFF << 0) /* PCM clock divider. Minimum value is 0x2. */
+#define PCM_DIV_POS                           (0) /* PCM clock divider. Minimum value is 0x2. */
+
+/* PCM_FDIV Register */
+
+#define PCM_FDIV_MASK                         (0xFFFF << 0) /* These bits define the fractional division part of the PCM clock. The left most ' */
+#define PCM_FDIV_POS                          (0) /* These bits define the fractional division part of the PCM clock. The left most ' */
+
+/* PDM_DIV Register */
+
+#define PDM_MASTER_MODE                       (1U << 9) /* Master mode selection 0: slave mode 1: master mode */
+#define CLK_PDM_EN                            (1U << 8) /* Enable for the internally generated PDM clock The PDM_DIV must be set before or  */
+#define PDM_DIV_MASK                          (0xFF << 0) /* PDM clock divider */
+#define PDM_DIV_POS                           (0) /* PDM clock divider */
+
+/* SRC_DIV Register */
+
+#define CLK_SRC2_EN                           (1U << 17) /* Enable for the internally generated SRC2 clock The SRC2_DIV must be set before o */
+#define CLK_SRC_EN                            (1U << 16) /* Enable for the internally generated SRC clock The SRC_DIV must be set before or  */
+#define SRC2_DIV_MASK                         (0xFF << 8) /* SRC2 clock divider */
+#define SRC2_DIV_POS                          (8) /* SRC2 clock divider */
+#define SRC_DIV_MASK                          (0xFF << 0) /* SRC clock divider */
+#define SRC_DIV_POS                           (0) /* SRC clock divider */
 
 #endif /* __DA1470_CRG_AUD_H */
