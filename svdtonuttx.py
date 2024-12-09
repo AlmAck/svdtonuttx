@@ -170,7 +170,7 @@ def export_memory_map(svd_path, output_dir, custom_prefix):
                 else:
                     end_address = base_address  # Default if size is unknown
         
-                symname = f"{custom_prefix.upper()}{peripheral.name.upper()}_BASE"
+                symname = f"{custom_prefix.upper()}_{peripheral.name.upper()}_BASE"
                 define = f"#define {symname:<20} 0x{base_address:08X}"
 
                 description = cleanse(peripheral.description) if peripheral.description else name
